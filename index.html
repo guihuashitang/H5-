@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机轮播图</title>
+    <!-- 防止屏幕进行伸缩 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+        body,html,div,ul,li{
+            padding:0;
+            margin:0;
+        }
+        #pic{
+            width:100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        #pic #img{
+            width:400%;
+            height: 300px;
+            position: relative;
+            transition: all .1s linear;
+            left: 0;
+        }
+        #img div{
+            width:25%;
+            height: 300px;
+            float: left;
+            background-color: orange;
+            text-align: center;
+            line-height: 300px;
+            color: white;
+        }
+        #circle{
+            width:72px;
+            height: 40px;
+            margin:0 auto;
+            position: relative;
+            z-index: 2;
+            top:-40px;
+        }
+        #circle ul li{
+            width:8px;
+            height: 8px;
+            background-color: white;
+            list-style: none;
+            float: left;
+            margin:15px 5px 0 5px;
+            transition: all .5s linear
+        }
+        #circle ul .active{
+            background-color: gray;
+            transition: all .5s linear
+        }
+    </style>
+</head>
+<body>
+    <div id="pic">
+        <div id="img">
+            <div class="imgIn">1111111</div>
+            <div class="imgIn">2222222</div>
+            <div class="imgIn">3333333</div>
+            <div class="imgIn">4444444</div>
+        </div>
+    </div>
+    <div id="circle">
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        window.onload = function(){
+            var startPos = {};//开始位置
+            var endPos = {};//结束位置
+            var scrollDirection;//滚动方向
+            var touch;//坐标
+            var index = 0;//记录滑动到第几张图片
+            var oImg = document.getElementById("img");
+            var oCircle = document.getElementById("circle");
+            var aCircle = oCircle.getElementsByTagName("li");
+            var allImg = document.getElementsByClassName("imgIn")
+            var ImgWidth =  parseInt(oImg.offsetWidth /allImg.length);//图片宽度
+            var moveWidth = 0;//鼠标移动距离
+            oImg.ontouchstart = function(event){
+                touch = event.targetTouches[0];//取得第一个touch的坐标值
+                startPos = {x:touch.pageX,y:touch.pageY}
+                scrollDirection = 0;
+            }
+            oImg.ontouchmove = function(event){
+                // 有多个地方滑动，不触发事件
+                if(event.targetTouches.length > 1){
+                    return
+                }
+                touch = event.targetTouches[0];
+                // 判断出滑动方向，向右为1，向左为-1
+                scrollDirection = touch.pageX-startPos.x > 0 ? 1 : -1;
+                if(scrollDirection==-1){
+                    let mouseWidth =  Math.abs(Math.round(startPos.x - touch.pageX))+index*ImgWidth;
+                    oImg.style.left = -mouseWidth +'px';
+                }
+                else{
+                    let mouseWidth =  index*ImgWidth - Math.abs(Math.round(startPos.x - touch.pageX));
+                    oImg.style.left = -mouseWidth +'px';
+                }
+            }
+            oImg.ontouchend = function(event){
+                endPos = {x:event.changedTouches[0].pageX,y:event.changedTouches[0].pageY};
+                if(scrollDirection==-1){
+                    console.log('向左',index)
+                    if(index==allImg.length-1){//滑动到最后一张图
+                        oImg.style.left = -index*ImgWidth +'px';
+                        return
+                    }
+                    moveWidth = Math.abs(Math.round(endPos.x - startPos.x)) ;
+                    if(moveWidth>=100){
+                        index++;
+                        for(var i=0;i<aCircle.length;i++){
+                            aCircle[i].className = '';
+                        }
+                        aCircle[index].className = 'active';
+                        ImgWidth =  parseInt(oImg.offsetWidth /allImg.length);
+                        oImg.style.left = -index*ImgWidth +'px';
+                    }else{
+                        oImg.style.left = -index*ImgWidth +'px';
+                    }
+                }
+                else{
+                    console.log('向右',index)
+                    if(index==0){//滑动到第一张图
+                        oImg.style.left = 0 +'px';
+                        return
+                    }
+                    moveWidth = Math.round(endPos.x - startPos.x);
+                    if(moveWidth>=100){
+                        index--;
+                        for(var i=0;i<aCircle.length;i++){
+                            aCircle[i].className = '';
+                        }
+                        aCircle[index].className = 'active';
+                        ImgWidth =  parseInt(oImg.offsetWidth /allImg.length);
+                        oImg.style.left = -index*ImgWidth +'px';
+                    }else{
+                        oImg.style.left = -index*ImgWidth +'px';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
