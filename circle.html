@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{   
+        width: 100px;   
+        height: 200px;   
+        position: absolute;   
+        top:0;   
+        overflow: hidden;   
+        }   
+        .right{   
+        right:0;   
+        }   
+        .left{   
+        left:0;   
+        }
+        .circleProgress{   
+            width: 160px;   
+            height: 160px;   
+            border:20px solid #e9f5ff;   
+            border-radius: 50%;   
+            position: absolute;   
+            top:0;   
+        }   
+        .rightcircle{   
+            border-radius:0 100px 100px 0;  
+            right:0;   
+        }  
+        /* .leftcircle{
+            border-radius: 100px 100px 0 0;  
+            left:0;  
+        } */
+        .circleProgress_wrapper{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="circleProgress_wrapper">  
+        <div class="wrapper right">  
+            <div class="circleProgress rightcircle"></div>  
+        </div>  
+        <div class="wrapper left">  
+            <div class="circleProgress leftcircle"></div>  
+        </div>  
+    </div> 
+</body>
+</html>
