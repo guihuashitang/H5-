@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "stripe": "/component/stripe/stripe"
+  }
+}

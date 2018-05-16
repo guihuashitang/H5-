@@ -1,0 +1,694 @@
+/* pages/question/question.wxss */
+page {
+  height: 100%;
+  background-image:url('http://image.chubanyun.net/images/poetry/questionBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5
+}
+
+.bg_in{
+  position: absolute;
+  z-index: 6
+}
+
+.bg_box{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+
+} */
+.bg{
+  width: 100%;
+  height: 100%;
+}
+.bg_in{
+  width: 100%;
+  
+  flex-grow:1;
+}
+.top {
+  padding:0 44rpx;
+}
+.top .music{
+  padding-top: 30rpx;
+}
+.top .music image{
+	width: 90rpx;
+  height: 90rpx;
+
+}
+
+.anima{
+  transform-origin: 50% 50%; 
+  animation: play 3s linear infinite  ;
+  transition: all 3s linear 0ms
+}
+
+@keyframes play{
+  0%{ transform: rotate(0) }
+  100%{ transform: rotate(360deg) }
+}
+.music .textInfo{
+width: 96rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background-color: rgba(0, 0, 0,0.2);
+  border-radius: 8rpx;
+  text-align: center;
+}
+.music .imageBox{
+  position: relative;
+  width: 90rpx;
+  height: 90rpx;
+}
+.music .line2{
+  position: absolute;
+  left:0;
+  top:50%;
+  margin-top: -2rpx;
+  width: 100%;
+  height:4rpx;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  border-radius:5rpx;
+}
+.progress {
+  width: 360rpx;
+  height: 38rpx;
+  margin:0 auto;
+  background-color: rgb(238, 238, 238);
+  border-radius: 50px;
+  position: relative;
+  border: 4rpx solid #fff;
+  box-shadow: 0px 3px 0px 0px rgba(118, 28, 8, 0.34);
+  box-sizing: border-box;
+}
+
+.pro_txt {
+  position: absolute;
+  color: #fff;
+  height: 32rpx;
+  width: 100%;
+  font-size: 26rpx;
+  line-height: 32rpx;
+  text-align: center;
+}
+
+.progress .progress_in {
+  width: 100%;
+  height: 100%;
+}
+
+.pro {
+  height: 100%;
+  border-radius: 50px;
+  background-image: linear-gradient( 0deg, rgb(255,97,62) 0%, rgb(255,173,45) 100%);
+}
+.hp {
+	position:relative;
+  width: 80rpx;
+  height: 36rpx;
+  background-color: rgba(0, 0, 0,0.2);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 46rpx;
+  box-sizing: border-box;
+}
+
+.hp .hp_in {
+  position: absolute;
+  left:-20rpx;
+  bottom:0;
+  width: 48rpx;
+  height: 42rpx;
+}
+.solution{
+  margin-top: 110rpx;
+}
+.solution .question {
+  width: 100%;
+  text-align: center;
+  padding:0 60rpx;
+  box-sizing: border-box;
+}
+
+.solution .question .ques_txt {
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.54);
+}
+.solution .question .ques_txt .null{
+  border-bottom: 1px solid #fff;
+  width:40rpx;
+  height: 40rpx; 
+  box-shadow: 0 1px 0 rgba(51,51,51,0.54);
+}
+.solution .question .author{
+  font-size: 22rpx;
+  color: #f5f5f5;
+  width: 100%;
+  text-align: right;
+  margin-top: 30rpx;
+  margin-bottom: 80rpx;
+}
+
+.audio {
+  display: flex;
+  width: 182rpx;
+  border-radius: 50rpx;
+  height: 63rpx;
+  align-items: center;
+  background-color: #6c8f0c;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 58rpx;
+  margin-bottom: 55rpx;
+}
+
+.audio .audio_txt {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.speak {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.ans_0_0 {
+  background-color: rgb(255, 110, 82) !important;
+  color: #fff !important;
+}
+
+.ans_0_1 {
+  background-color: rgb(78, 185, 132) !important;
+  color: #fff !important;
+}
+.yes {
+  background-color: #36be65 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 0 #536a13;
+}
+
+.answer .answer_in {
+  position: relative;
+  width: 618rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  border-radius: 50rpx;
+  color: #333;
+  text-align: center;
+  font-size: 32rpx;
+  border: 6rpx solid #fff;
+  box-shadow: 0px 2px 6px 0px rgba(199, 100, 79, 0.29);
+}
+.answer .checked{
+  width: 115rpx;
+  height: 98rpx;
+  position: absolute;
+  right:-10rpx;
+  top:-10rpx;
+}
+.bottom{
+  justify-content: flex-end;
+  margin:40rpx 47rpx 0;
+}
+.bottom image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.bottom .textInfo{
+width: 96rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background-color: rgba(0, 0, 0,0.2);
+  border-radius: 8rpx;
+  text-align: center;
+}
+.bottom .key,.bottom .payed{
+  margin-right: 50rpx;
+}
+.bottom .music .imageBox{
+  position: relative;
+  width: 90rpx;
+  height: 90rpx;
+}
+.bottom .music .line2{
+  position: absolute;
+  left:0;
+  top:50%;
+  margin-top: -2rpx;
+  width: 100%;
+  height:4rpx;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  border-radius:5rpx;
+}
+
+
+.enf_bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://image.chubanyun.net/images/Word100/success.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.end_in {
+  position: fixed;
+  width: 562rpx;
+  height: 600rpx;
+  background-color: #fff;
+  border-radius: 50rpx;
+  top: 20%;
+  left: 50%;
+  margin-left: -281rpx;
+  background: url(http://image.chubanyun.net/images/Word100/xuxian.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 0 #617a05;
+}
+
+.menu {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 310rpx;
+  position: fixed;
+  top: 428rpx;
+  left: 50%;
+  margin-left: -176rpx;
+}
+
+.red {
+  width: 680rpx;
+  height: 212rpx;
+  margin-left: -60rpx;
+  margin-top: -68rpx;
+}
+
+.menu_img, .menu_img_o {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.menu_img {
+  margin-left: 40rpx;
+}
+
+.end_txt {
+  text-align: center;
+}
+
+.txt_o {
+  width: 278rpx;
+  height: 86rpx;
+  position: absolute;
+  left: 50%;
+  top: 20rpx;
+  margin-left: -139rpx;
+}
+
+.txt_t {
+  font-size: 35rpx;
+  margin-top: 120rpx;
+}
+
+.audio_t {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #fff;
+  line-height: 125rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 0 #556d12;
+  margin-bottom: 128rpx;
+}
+
+.question_speak {
+  width: 77rpx;
+  height: 63rpx;
+}
+
+
+.opa {
+  opacity: 0.4 !important;
+}
+
+/* .key_in:active {
+  background-color: #309cd7;
+  color: #fff;
+} */
+
+.printf {
+  width: 100%;
+  height: 40rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.printf_in {
+  font-size: 54rpx;
+  color: #fff;
+}
+
+.red_font {
+  color: #a7170d !important;
+}
+
+.trueword {
+  height: 63rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 63rpx;
+  margin-top: 58rpx;
+  margin-bottom: 55rpx;
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.del {
+  font-size: 30rpx;
+  color: #7a9d0e;
+  background-color: #fff;
+  width: 37rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  border: 2rpx solid #fff;
+  border-radius: 5rpx;
+}
+
+.shan {
+  display: flex;
+  align-items: center;
+  margin-left: 40rpx;
+}
+
+.shan .sanjiao {
+  width: 0;
+  height: 0;
+  border-top: 19rpx solid transparent;
+  border-right: 20rpx solid #fff;
+  border-bottom: 19rpx solid transparent;
+}
+
+.del_t {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 40rpx;
+}
+
+.dad {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.line {
+  width: 30rpx;
+  height: 40rpx;
+  border-bottom: 5rpx solid #fff;
+  margin-left: 5rpx;
+}
+
+.submit {
+  width: 662rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 56rpx;
+}
+
+.submit .jiexi, .submit .next {
+  width: 288rpx;
+  height: 78rpx;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #4e8cee;
+  border: 6rpx solid #fff;
+  border-radius: 10rpx;
+  box-shadow: 0px 2px 6px 0px rgba(199, 100, 79, 0.29);
+}
+.submit .jiexi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit .next {
+  background-color: #fff;
+}
+
+.submit .jie_bg {
+  width: 31rpx;
+  height: 41rpx;
+  margin-right: 10rpx;
+}
+
+.detail_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.detail_in {
+  position: fixed;
+  width: 100%;
+  height: 90%;
+  bottom: 0;
+  left: 0;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background-image: url(http://image.chubanyun.net/images/Word100/word_bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.detailquestion {
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.detail_audio {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 30rpx;
+  margin-top: 36rpx;
+}
+
+.ipa {
+  margin-right: 35rpx;
+}
+
+.trans {
+  color: #fff;
+  font-size: 28rpx;
+  margin-top: 70rpx;
+}
+
+.x {
+  float: right;
+}
+
+.de_bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  color: #32a0da;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+/* .de_bottom_txt {
+  float: right;
+  margin-right: 140rpx;
+  width: 100rpx;
+  height: 100%;
+  text-align: center;
+} */
+
+.end_star {
+  position: absolute;
+  top: -100rpx;
+  left: 50%;
+  margin-left: -225rpx;
+  display: flex;
+  width: 450rpx;
+  justify-content: space-around;
+}
+
+.starnum_0 view:nth-child(1) {
+  width: 150rpx;
+  height: 150rpx;
+  background: url(http://image.chubanyun.net/images/Word100/no_star.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(0.6) rotate(-16deg);
+}
+
+.starnum_0  view:nth-child(2) {
+  width: 150rpx;
+  height: 150rpx;
+  background: url(http://image.chubanyun.net/images/Word100/no_star.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.starnum_0  view:nth-child(3) {
+  width: 150rpx;
+  height: 150rpx;
+  background: url(http://image.chubanyun.net/images/Word100/no_star.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(0.6) rotate(16deg);
+}
+
+.starnum_1  view:nth-child(1) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_liang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -35rpx;
+  top: -50rpx;
+}
+
+.starnum_1  view:nth-child(2) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_mie.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  margin-left: -125rpx;
+  top: -43rpx;
+}
+
+.starnum_1  view:nth-child(3) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_mie.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(32deg);
+  position: absolute;
+  left: 230rpx;
+  top: -50rpx;
+}
+
+.starnum_2  view:nth-child(1) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_liang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -35rpx;
+  top: -50rpx;
+}
+
+.starnum_2  view:nth-child(2) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_liang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.4) rotate(16deg);
+  position: absolute;
+  left: 50%;
+  margin-left: -125rpx;
+  top: -43rpx;
+}
+
+.starnum_2  view:nth-child(3) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_mie.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(0.8) rotate(16deg);
+  position: absolute;
+  left: 230rpx;
+  top: -50rpx;
+}
+
+.starnum_3  view:nth-child(1) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_liang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -35rpx;
+  top: -50rpx;
+}
+
+.starnum_3  view:nth-child(2) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_liang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.4) rotate(16deg);
+  position: absolute;
+  left: 50%;
+  margin-left: -125rpx;
+  top: -43rpx;
+}
+
+.starnum_3  view:nth-child(3) {
+  width: 250rpx;
+  height: 250rpx;
+  background: url(http://image.chubanyun.net/images/Word100/star_liang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(32deg);
+  position: absolute;
+  left: 230rpx;
+  top: -50rpx;
+}
+.result{
+  margin-top: -180rpx;
+}

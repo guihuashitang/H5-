@@ -1,0 +1,27 @@
+<!--pages/poetryDetail/poetryDetail.wxml-->
+<view class="wrap">
+	<block wx:if="{{is_collect==0}}">
+		<view class="flexR topBar">
+			<view class="next flexR" bindtap="toPre" wx:if="{{currentIndex!=0}}">
+				<image class="pre" src="/images/nextArrow.png"></image>
+				<view class="colorF">上一首：{{poetryList[currentIndex-1].poetry_title}}</view>			
+			</view>
+			<view wx:else style="width:20rpx;height:20rpx;"></view>
+			<view class="next flexR" bindtap="toNext" wx:if="{{currentIndex!=(poetryList.length-1)}}">
+				<view class="colorF">下一首：{{poetryList[currentIndex+1].poetry_title}}</view>
+				<image src="/images/nextArrow.png"></image>
+			</view>
+			<view wx:else style="width:20rpx;height:20rpx;"></view>
+		</view>
+		<swiper class="poetrySwiper " current="{{currentIndex}}" bindanimationfinish="swiperAnimationfinish" bindchange="swiperChange" >
+			<swiper-item wx:for="{{poetryList}}">
+				<poetryDetail poetryList="{{poetryList}}" currentIndex="{{index}}" bindplay="toPlay"></poetryDetail>
+			</swiper-item>
+		</swiper>
+	</block>
+	<view class="collectBox" wx:else>
+		<poetryDetail poetryList="{{poetryList}}" currentIndex="{{currentIndex}}"></poetryDetail>
+	</view>
+	
+</view>
+

@@ -1,0 +1,19 @@
+<!--component/pay/pay.wxml-->
+<view class="mask flexR">
+  <view class="box clearfix">    
+  	<image class="payBg" src="/images/payBg.png"></image>
+  	<view class="closePay flexR" bindtap="payClose">
+  		<image src="/images/closePay.png"></image>
+  	</view>
+    <view class="showMoney clearfix">    	
+      <text>购买此书需要支付 ¥ </text>
+      <view class="showNumOfMoney"> {{book_price}}</view>
+      <text>元</text>
+    </view>      
+    <view class="btn flexR">
+    	<view class="loadingTip" wx:if="{{isClickPay}}">正在连接支付...</view>  
+    	<view class="cancle" bindtap="payClose">取消</view>
+    	<view class="openAllBook" hover-class="action" bindtap="fastBuySeed">支付</view>
+    </view>
+  </view>
+</view>

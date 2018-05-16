@@ -1,0 +1,212 @@
+/* component/practiceResult/practiceResult.wxss */
+.flexR{
+	display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+.flexC{
+	display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.result{
+  position: relative;
+  width: 711rpx;
+}
+.finish{
+  position: absolute;
+  left:0;
+  top:-119rpx;
+  z-index: 99;
+  width: 711rpx;
+  height: 224rpx;
+  line-height: 224rpx;
+  background: url('http://image.chubanyun.net/images/poetry/finishBg.png');
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.info {
+	position: relative;
+	z-index: 22;
+  border-radius: 50rpx;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 7px 0px rgba(123, 54, 40, 0.23);
+  width: 600rpx;
+  height: 624rpx;
+  margin:0 auto;
+  padding-top: 95rpx;
+  box-sizing: border-box;
+  
+}
+.user{
+  text-align: center;
+  position: relative;
+}
+.user .imageBox{
+  border: 2rpx solid rgb(222, 100, 73);
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 136rpx;
+  height: 136rpx;
+  margin:0 auto;
+}
+.user .imageBox image{
+  width: 136rpx;
+  height: 136rpx;
+  border-radius: 50%;
+}
+.user .key{
+  position: absolute;
+  right:-190rpx;
+  top:40rpx;
+}
+.user .key .keyBox{
+  background: #de6449;
+  width:50rpx;
+  height:50rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.user .key image{
+  width: 25rpx;
+  height: 32rpx;
+}
+.right{
+	margin-top: 60rpx;
+	font-size: 36rpx;
+}
+.right text{
+	color: #dd6449;
+}
+/* .win{
+  margin-top: 40rpx;
+}
+.win text{
+  color: #666;
+}
+.win .honor{
+  margin-right: 60rpx;
+}
+.win .honor image{
+  width: 36rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+}
+.win .key image{
+  width: 31rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+} */
+.btn .again{
+  color:#de6449;
+  border:2rpx solid rgb(222, 100, 73);
+  width: 266rpx;
+  height: 84rpx;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 84rpx;
+  box-sizing: border-box;
+}
+.btn{
+  padding: 0 20rpx;
+  justify-content: space-between;
+  margin-top: 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn .share{
+  position: relative;
+  color:#fff;
+  width: 266rpx;
+  height: 84rpx;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 84rpx;
+  box-sizing: border-box;
+  background-image: -webkit-linear-gradient( 180deg, rgb(222,100,73) 0%, rgb(255,130,102) 100%);
+  box-shadow: 0 4rpx 6rpx rgba(246,70,31,0.34)
+}
+.btn .share button{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 266rpx;
+  height: 84rpx;
+  opacity: 0;
+}
+.shareTip{
+  
+  font-size: 22rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.goPay {
+  position: absolute;
+  left: 0;
+  right:0;
+  bottom: -210rpx;
+  width: 572rpx;
+  height: 612rpx;
+  /*z-index:-1;*/
+  margin:0 auto;
+}
+.goPay .goPayBg{
+  width:572rpx;
+  height: 612rpx;
+}
+.goPay .explain{
+  position: absolute;
+  left:0;
+  bottom:35rpx;
+  width: 100%;
+  padding: 0 30rpx 0 40rpx;
+  box-sizing: border-box;
+}
+.goPay .explain .list{
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.goPay .explain .list:nth-of-type(1){
+  margin-bottom: 10rpx;
+}
+.goPay .explain .list .leftIcon{
+  position: absolute;
+  left:-20rpx;
+  top:10rpx;
+  border-radius: 50%;
+  background-color: rgb(153, 153, 153);
+  width: 10rpx;
+  height: 10rpx;
+}
+.goPay .explain .list .explainText{
+  flex-grow: 1;
+  font-size: 24rpx;
+  color:#666;
+}
+.goPay .explain .list .explainText text{
+  color: #4e8cee;
+  text-decoration: underline;
+}
+
+/* .goPay .pay{
+  position: absolute;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+.goPay text{
+  color: #4e8cee;
+}
+.goPay image{
+width:18rpx;
+height: 20rpx;
+margin-left: 10rpx;
+} */

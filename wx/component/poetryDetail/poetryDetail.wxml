@@ -1,0 +1,59 @@
+<!--component/poetryDetail/poetryDetail.wxml-->
+			<view class="poetry">
+				<view class="playAudio flexR" bindtap="play" wx:if="{{poetryList[currentIndex].audio_url}}">
+					<!--<playAudio bindplay="toPlay" isPlaying="{{poetryList[currentIndex].isPlaying}}" audioUrl="{{poetryList[currentIndex].audio_url}}">
+						<image src="/images/readIcon.png" wx:if="{{!poetryList[currentIndex].isPlaying}}"></image>	
+						<image class="gif" src="/images/readIcon.gif" wx:else></image>
+				</playAudio>-->
+					<image src="/images/readIcon.png" wx:if="{{!poetryList[currentIndex].isPlaying}}"></image>	
+					<image src="/images/readIcon.gif" wx:else></image>
+				</view>
+				<view style="display:none;">
+					<image src="/images/readIcon.png"></image>	
+					<image src="/images/readIcon.gif"></image>
+				</view>
+				<view class="collection flexR" bindtap="collection">
+					<image wx:if="{{poetryList[currentIndex].is_collect==0}}" src="/images/collectionIcon2.png"></image>
+					<image wx:else src="/images/collectionIcon3.png"></image>
+				</view>
+				<view class="share flexR">
+					<image src="/images/shareIcon.png"></image>
+					<button class="shareBtn" open-type="share"></button>
+				</view>
+				<view class="poetryBox flexC">
+					<view class="title font18">{{poetryList[currentIndex].poetry_title}}</view>
+					<view class="author font11 color9">[{{poetryList[currentIndex].dynasty}}]{{poetryList[currentIndex].poet_name}}</view>
+					<view wx:for="{{poetryList[currentIndex].words}}" class="sentence flexR">
+						<view class="word" wx:for="{{item}}">
+							<view class="font11">{{item.pinyin?item.pinyin:''}}</view>
+							<view class="font18">{{item.word}}</view>
+						</view>
+					</view>					
+				</view>
+			</view>
+			<view class="info flexC">
+				<view class="tap flexR" bindtap="toTap">
+					<view class="{{poetryList[currentIndex].tabIndex==0?'active':''}}" data-index="0">翻译</view>
+					<view class="{{poetryList[currentIndex].tabIndex==1?'active':''}}" data-index="1">释义</view>
+					<view class="{{poetryList[currentIndex].tabIndex==2?'active':''}}" data-index="2">介绍</view>
+				</view>
+				<view class="content">
+					<block wx:if="{{poetryList[currentIndex].tabIndex==0}}">
+						<text decode="true" class="font14 color6">{{poetryList[currentIndex].translation?poetryList[currentIndex].translation:'暂无翻译'}}</text>
+					</block>
+					<block wx:if="{{poetryList[currentIndex].tabIndex==1}}">
+				       <block wx:if="{{poetryList[currentIndex].annotateNew}}">
+					       <view class="explain" wx:for="{{poetryList[currentIndex].annotateNew}}">
+					       	【<text class="color3 font14">{{item.word}}</text>】<text class="color6 font14">{{item.explain}}</text>
+					       </view>
+				       </block>
+				       <block wx:else>
+				       	<text class="font14 color6">暂无释义</text>
+				       </block>
+				    </block>
+					<block wx:if="{{poetryList[currentIndex].tabIndex==2}}">
+						<text decode="true" class="font14 color6">{{poetryList[currentIndex].appreciation?poetryList[currentIndex].appreciation:'暂无介绍'}}</text>
+					</block>
+				</view>
+			</view>
+

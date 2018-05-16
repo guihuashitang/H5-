@@ -1,0 +1,395 @@
+/* pages/pkAnswer/pkAnswer.wxss */
+page{
+  background: url(http://image.chubanyun.net/images/poetry/pk_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+  padding: 44rpx;
+  box-sizing: border-box;
+  height: 100vh
+}
+.userInfo{
+  background: #fff;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head_img{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  border: 1px solid #999999;
+  position: relative;
+  overflow: hidden
+}
+.head_img .pk_head{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+}
+.head_img .head_mask{
+  position: absolute;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  color: #fff;
+  
+}
+.pk_name{
+  width: 96rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+ text-align: center
+}
+.grade{
+  width: 50%;
+
+}
+.grade .time{
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  color: #333
+}
+
+.grade .timeV{
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  color: #fe5936
+}
+.grade .timeD{
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  color: #999999
+}
+.grade .timeP{
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  color: #4e8df1
+}
+
+
+.grade_in .fist_img{
+  width: 36rpx;
+  position: absolute;
+  left: 50%;
+  top: -6rpx;
+  margin-left: -18rpx;
+  transition: left .5s ease-in
+}
+.ques_txt .null{
+  border-bottom: 1px solid #fff;
+  width:40rpx;
+  height: 40rpx; 
+  box-shadow: 0 1px 0 rgba(51,51,51,0.54);
+}
+.challenger_ed image{
+ float: right 
+}
+.challenger_ed view{
+ float: right ;
+ clear: both
+}
+/* .txt-left{
+  text-align: left
+}
+.txt-right{
+    text-align: right
+} */
+.grade_in{
+  position: relative;
+}
+
+.grade_in {
+   width:  100%;
+   height: 22rpx;
+   border-radius: 50px;
+
+}
+
+.grade_in .grade_er,
+.grade_in .grade_ed{
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  transition: width .5s ease-in
+}
+.grade_in .grade_er{
+  background: #fecc44
+}
+.grade_in .grade_ed{
+  background: #4edeba
+}
+/*答题  */
+.solution{
+  margin-top: 100rpx;
+}
+.solution .question {
+  width: 100%;
+  text-align: center;
+  padding:0 60rpx;
+  box-sizing: border-box;
+   padding-bottom: 70rpx ;
+   position: relative
+}
+
+.solution .question .addGrade_txt{
+  position: absolute;
+  right: 0;
+  bottom: -10rpx;
+  width: 200rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ffe00e
+}
+
+.solution .question .ques_txt {
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.54);
+}
+.solution .question .author{
+  font-size: 22rpx;
+  color: #f5f5f5;
+  width: 100%;
+  text-align: right;
+  margin-top: 30rpx;
+   /* margin-bottom: 80rpx;  */
+}
+
+.audio {
+  display: flex;
+  width: 182rpx;
+  border-radius: 50rpx;
+  height: 63rpx;
+  align-items: center;
+  background-color: #6c8f0c;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 58rpx;
+  margin-bottom: 55rpx;
+}
+
+.audio .audio_txt {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.speak {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.ans_0_0 {
+  background-color: rgb(255, 110, 82) !important;
+  color: #fff !important;
+  
+}
+
+.ans_0_1 {
+  background-color: rgb(78, 185, 132) !important;
+  color: #fff !important;
+}
+.yes {
+  background-color: #36be65 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 0 #536a13;
+  
+}
+
+.answer .answer_in {
+  position: relative;
+  width: 618rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  border-radius: 50rpx;
+  color: #333;
+  text-align: center;
+  font-size: 32rpx;
+  border: 6rpx solid #fff;
+  box-shadow: 0px 2px 6px 0px rgba(199, 100, 79, 0.29);
+}
+.answer .checked{
+  width: 115rpx;
+  height: 98rpx;
+  position: absolute;
+  left:-10rpx;
+  top:-10rpx;
+  
+}
+.voice{
+  margin-top: 100rpx ;
+  transition: all  .6s ease-in
+}
+.voice .microPhone{
+  width: 206rpx
+}
+
+.indexQuestion{
+  color: #fff;
+  font-size: 38rpx;
+  font-family: monospace;
+  transition: all  .5s ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center
+  }
+.indexQuestion .indexNum{
+  font-size: 50rpx;
+}
+.questionA{
+  transition: all  .5s ease-in
+}
+
+
+ .loading{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* padding-top:  100rpx  */
+} 
+
+.loading .loading_in{
+  position: relative;
+  width: 194rpx;
+  height: 550rpx;
+  margin: 0 auto
+}
+
+.loading .myhead_img{
+  width: 194rpx;
+  height: 194rpx;
+    border: 1px solid #dd654a;
+  border-radius: 50%;
+   /* border: 1px solid #dd654a;  */
+  /* border-radius: 50%; */
+  /* position: absolute; */
+  
+}
+
+.loading .head{
+  width: 194rpx;
+  position: absolute;
+  transition: all .1s ease-in;
+}
+
+.loading .myName{
+  width: 194rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #fff;
+
+
+
+}
+.loading .circle_play3{
+  background: rgba(255, 255, 255, .4);
+  border-radius: 50%;
+  animation: circle3 2.5s linear 0s infinite;
+  position: absolute;
+    width: 194rpx;
+  height: 194rpx ;
+} 
+.loading .circle_play2{
+  background: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+   animation: circle2 2.5s linear 0s infinite; 
+  position: absolute;
+  width: 194rpx;
+  height: 194rpx ;
+}  
+.loading .circle_play1{
+  background: rgba(255, 255, 255, .1);
+  border-radius: 50%;
+  animation: circle1 2.5s linear 0s  infinite ;
+  position:absolute;
+  transform-origin: 50% 50%;
+  width: 194rpx;
+  height: 194rpx ;
+  /* transform: translateX(50%) */
+} 
+     
+  @keyframes circle3{
+  0%{ transform: scale(1)}
+  80%{ transform: scale(1)}
+  100%{ transform: scale(1.5)}
+} 
+  @keyframes circle2{
+  0%{ transform: scale(1)}
+  60%{transform: scale(1)}
+  100%{ transform: scale(2.1) }
+}   
+ @keyframes circle1{
+  0%{ transform: scale(1)}
+  100%{ transform: scale(2.6) }
+}  
+.loading .load_text{
+  width: 378rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  margin-top: 100rpx
+}
+ 
+.loading .thunder{
+  position: relative;
+  height: 246rpx;
+  transition: all .1s ease-in .1s
+}
+
+.loading .pk_thunder{
+  width: 234rpx;
+  height: 280rpx;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -117rpx;
+  top: -80rpx;
+  
+}
+.loading .hisInfo{
+  position: absolute;
+  left: 100rpx;
+    transition: all .1s ease-in .5s
+}
+.loading .hisHead{
+  width: 194rpx; 
+  height: 194rpx;
+  border: 1px solid #dd654a;
+  border-radius: 50%;
+  margin-bottom:  5rpx ;
+  left: 50%;
+ 
+    transform-origin: 50% 50%;
+}
+
+.loading .namePk{
+  width: 194rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #fff
+}
+

@@ -1,0 +1,87 @@
+<!--pages/errorQuestion/errorQuestion.wxml-->
+<!--pages/question/question.wxml-->
+<view class='bg flexC'> 
+  <view class='bg_in'>
+    <view class='top flexR'>
+      <playAudio bindplay="toPlay" audioUrl="" autoPlay="{{autoPlay}}" isPlaying="{{openBgMusic}}" readType="bgMusic">
+				<view class="music flexC">
+					<view class="imageBox">
+						<image src="/images/music.png"></image>
+						<view class="line2" wx:if="{{!openBgMusic}}"></view>
+					</view>
+					<view class="textInfo font10 colorF" wx:if="{{!openBgMusic}}">开启音效</view>
+					<view class="textInfo font10 colorF" wx:else>关闭音效</view>
+				</view>
+			</playAudio>
+      <view class='progress'>
+        <view class='pro_txt'>{{indexNum+1}}/{{totalCount<0?0:totalCount}}</view>
+        <view class='progress_in'>
+          <view class='pro' wx:if="{{totalCount!=0}}" style='width:{{(indexNum+1)/totalCount*100}}%'></view>
+        </view>
+      </view>
+      <view class='hp'>
+        <image class='hp_in' src='/images/hp_xin.png'></image>
+        <view class="colorF">{{hp}}</view>
+      </view>
+    </view>
+
+    <!--选择题  -->
+    <block wx:if="{{question[question.length-1].question_type==1 }}">
+      <view class='solution'>
+        <view class='question'>
+          <view class='ques_txt flexR'>
+          	<block wx:for="{{question[question.length-1].question_content}}">
+          		<text wx:if="{{item!='*'}}">{{item}}</text>
+          		<view wx:else class="null"></view>
+          	</block>          	
+          </view>   
+          <view class='author'>——{{question[question.length-1].poet_name}}《{{question[question.length-1].poetry_title}}》</view>        	          
+        </view>
+        <view class='answer'>
+          <block wx:for="{{question[question.length-1].answers}}" >
+          	<block wx:if="{{isOver}}">
+          		<view wx:if="{{item.checked}}" class='answer_in  ans_0_{{item.is_right?1:0}}'
+            data-index='{{index}}' bindtap='answer'>
+            	{{item.answer}}
+            	<image class="checked" src="/images/checked.png"></image>
+            </view>
+            <view wx:else class='answer_in  ans_0_{{item.is_right?1:""}}'
+            data-index='{{index}}' bindtap='answer'>{{item.answer}}</view>
+          	</block>
+            <view wx:else class='answer_in  ans_0_' bindtap='answer' data-index='{{index}}'>{{item.answer}}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+    <!--解析按钮-->
+    <view class='submit' wx:if="{{isOver&&!isRight}}">
+      <!--<view class='jiexi' bindtap='detail'>
+        <image class='jie_bg' src='/images/analysis.png'></image>
+        <view class="colorF">解析</view>
+      </view>-->
+      <view class='next color3' bindtap='nextWord'>下一题</view>
+    </view>
+	<!--<view class="bottom flexR">
+		<view class="payed flexC">
+			<image src="/images/payed.png"></image>
+			<view class="textInfo font10 colorF">已购买</view>
+		</view>
+		<view class="key flexC">
+			<image src="/images/key.png"></image>
+			<view class="textInfo font10 colorF">钥匙×14</view>
+		</view>
+		<playAudio bindplay="toPlay" audioUrl="http://f3.5rs.me/upload/20171020/2017_10_20_182941446.mp3" autoPlay="{{autoPlay}}" isPlaying="{{openBgMusic}}" readType="bgMusic">
+			<view class="music flexC">
+				<view class="imageBox">
+					<image src="/images/music.png"></image>
+					<view class="line2" wx:if="{{!openBgMusic}}"></view>
+				</view>
+				<view class="textInfo font10 colorF" wx:if="{{!openBgMusic}}">开启音效</view>
+				<view class="textInfo font10 colorF" wx:else>关闭音效</view>
+			</view>
+		</playAudio>
+		
+	</view>-->
+  </view>
+</view>
+<showModal wx:if="{{showModal}}" bindconfirm="confirm" btnInfo="{{btnInfo}}"></showModal>

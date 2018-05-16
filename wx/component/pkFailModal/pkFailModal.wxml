@@ -1,0 +1,40 @@
+<!--component/pkFailModal/pkFailModal.wxml  -->
+<view class='pkFailModal ' wx:if="{{showFailModal}}" style='  transform: translateY({{transYFail}}rpx)'>
+  <image class='victory_img' wx:if="{{!isDraw}}" src='/images/fail_img.png' mode='widthFix'></image>
+  <image class='writing_img' wx:if="{{!isDraw}}" src='/images/failWriting_img.png' mode='widthFix'></image>
+  <image class='victory_img' wx:if="{{isDraw}}" src='/images/pingju.png' mode='widthFix'></image>
+  <image class='writing_img' wx:if="{{isDraw}}" src='/images/ping_img.png' mode='widthFix'></image>
+  <view class='grade flexR'>
+    <view>学分：</view>
+    <view class="score flexR" wx:if="{{!isDraw}}">
+      <view class="item">-</view>
+      <view class="item">
+        <view class="bai" animation="{{animationData}}" style="transform:translate(0,0);">
+          <view class="count">0</view>
+          <view wx:for="{{9}}" wx:key="{{index}}">{{index+1}}</view>
+          <view class="count">0</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="shi" animation="{{animationData2}}" style="transform:translate(0,0);">
+          <view class="count">0</view>
+          <view wx:for="{{9}}" wx:key="{{index}}">{{index+1}}</view>
+          <view class="count">0</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="ge" animation="{{animationData3}}" style="transform:translate(0,0);">
+          <view class="count">0</view>
+          <view wx:for="{{9}}" wx:key="{{index}}">{{index+1}}</view>
+          <view class="count">0</view>
+        </view>
+      </view>
+    </view>
+    <view class='victoryPk flexR' wx:if="{{isDraw}}">
+      <view class='flexR' wx:for="{{failPk}}">{{item}}</view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='againPk' bindtap="again">再来一局</view>
+  </view>
+</view>

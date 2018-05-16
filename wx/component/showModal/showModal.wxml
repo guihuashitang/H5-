@@ -1,0 +1,19 @@
+<!--component/showModal/showModal.wxml-->
+<view class="mask flexR" wx:if="{{showModal}}">
+	<view class="modalBox" style="{{btnInfo.style?btnInfo.style:''}}">
+		<view class="text">{{btnInfo.content}}</view>
+		<block wx:if="{{btnInfo.cancel.text||btnInfo.confirm.text}}">
+			<view class="btn flexR double" wx:if="{{btnInfo.cancel.text}}">
+				<view class="mainColor sure" bindtap="sure">
+					{{btnInfo.confirm.text}}
+					<button wx:if="{{btnInfo.confirm.isShare}}" class="btnShare" open-type="share"></button>
+				</view>
+				<view class="close" bindtap="close">{{btnInfo.cancel.text}}</view>
+			</view>
+			<view bindtap="sure" class="btn one mainColor sure"  wx:else>
+				{{btnInfo.confirm.text}}
+				<button wx:if="{{btnInfo.confirm.isShare}}"  class="btnShare" open-type="share"></button>
+			</view>
+		</block>
+	</view>	
+</view>

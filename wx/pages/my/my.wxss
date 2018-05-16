@@ -1,0 +1,277 @@
+/* pages/my/my.wxss */
+page{
+  background-color: #f5f5f5
+}
+
+.container{
+  padding: 0 44rpx;
+  box-sizing: border-box;
+  padding-top:   330rpx
+}
+
+
+
+.container .userInfo{
+  width: 900rpx;
+  height: 330rpx;
+  background: linear-gradient(to bottom, #ff9178,#ffce62);
+  border-radius: 0 0 100% 100%;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  margin-left: -450rpx ;
+  /* margin-left: 69rpx;  */
+}
+
+.userInfo .userInfo_in{
+  width: 100vh;
+  height: 100%;
+  justify-content: flex-start;
+  padding-left: 113rpx;
+  position: relative
+}
+.userInfo .headImg{
+  width: 138rpx;
+  height: 138rpx;
+  position: relative;
+}
+
+.userInfo .myHeadImg{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #de6747;
+  box-shadow: 0 2px 5px #fc9951;
+  position: absolute
+}
+
+ .userMessage{
+   margin-left: -70rpx;   
+  height: 138rpx; 
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 62%
+}
+.userMessage .userName{
+   justify-content:flex-start;
+padding-left: 86rpx;
+box-sizing: border-box;
+}
+.userMessage .userName .keyIcon{
+  width: 26rpx;
+  height: 33rpx;
+  margin: 0 10rpx
+}
+
+.wxname{
+  font-size: 32rpx;
+  color: #fff;
+  width: 50%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.keyNum{
+  font-size: 22rpx;
+  color: #fff;
+}
+.progress{
+  background: #fff;
+  border-radius: 50px;
+  padding: 14rpx 32rpx 11rpx 86rpx;
+  box-sizing: border-box;
+  /* width: 440rpx; */
+  /* height: 138rpx; */
+}
+
+.progress  .levelIcon{
+  width: 26rpx;
+  height: 30rpx;
+  margin-right: 10rpx
+}
+
+.progress  .diamonds{
+  width: 26rpx;
+  height: 24rpx;
+  margin-right: 10rpx
+}
+
+.progress .level-txt{
+  font-size: 22rpx;
+  color: #fbc035;
+}
+
+.progress .diamonds-txt{
+  font-size: 22rpx;
+  color: #5e95ed
+}
+
+.progress .progressBar{
+  width: 100%;
+  height: 10rpx;
+  background: #eeeeee;
+  margin-top: 10rpx;
+  border-radius: 50px;
+}
+
+.progress .progressBar .progressBar_in{
+  width: 0;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(to right ,#855fff,#4f8ded);
+  transition: width .5s ease-in
+}
+
+.marginClass{
+  margin-right: 20rpx
+}
+
+.myOperate{
+  /* padding: 0 30rpx; */
+  box-sizing: border-box;
+  background: #ffffff;
+  width: 100%;
+  border-radius: 15rpx;
+  margin-top: 40rpx;
+  box-shadow: 0 0 20rpx #e7e7e7
+}
+
+.myOperate .myOperate_in{
+	display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin: 0 30rpx
+}
+
+.myOperate .myBuy{
+  width: 43rpx;
+  height: 37rpx;
+  margin-right: 20rpx
+}
+
+.myOperate .collectionIcon{
+  width: 43rpx;
+  height: 40rpx;
+  margin-right: 20rpx
+}
+
+.myOperate .myPk{
+  width: 43rpx;
+  height: 42rpx;
+  margin-right: 20rpx
+}
+
+.myOperate .contactIcon{
+  width: 37rpx;
+  height: 42rpx;
+  margin-right: 25rpx
+}
+
+.myOperate .setUpIcon{
+  width: 43rpx;
+  height: 39rpx;
+  margin-right: 20rpx
+}
+
+.wxLogo{
+  width: 62rpx;
+  margin-right: 10rpx;
+  height:52rpx;
+}
+
+.myOperate  .arrow{
+  width: 14rpx;
+  height:  22rpx;
+}
+
+.myOperate .jump{
+  justify-content: space-between;
+  width: calc(100% - 70rpx);
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eeeeee;
+  color: #333;
+  font-size: 28rpx
+}
+
+.operate:last-child .jump{
+  border: none
+}
+
+.hoverActive{
+  background: #f8f8f8
+}
+.operate{
+  position: relative
+}
+.contact_btn{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  padding: 0;
+  border: none;
+  opacity: 0
+}
+
+.hat_img_1{
+  width: 74rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55
+}
+.hat_img_2{
+  width: 74rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55
+}
+.hat_img_3{
+  width: 80rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55
+}
+.hat_img_4{
+  width: 88rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55
+}
+.hat_img_5{
+  width: 125rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55;
+  left: 100rpx
+}
+.hat_img_6{
+  width: 105rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55;
+  left: 100rpx
+}
+.hat_img_7{
+  width: 105rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55;
+  left: 100rpx
+}
+.hat_img_8{
+  width: 115rpx;
+  height: 59rpx;
+  position: absolute;
+  top: 68rpx;
+  z-index: 55;
+  left: 100rpx
+}

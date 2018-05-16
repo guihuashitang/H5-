@@ -1,0 +1,51 @@
+/* pages/poetryDetail/poetryDetail.wxss */
+.wrap{
+	background-image:url('http://image.chubanyun.net/images/poetry/poetryDetailBg.png');
+  background-size: cover;
+}
+.topBar{
+	width: 100%;
+  justify-content: space-between;
+  height: 78rpx;
+  line-height: 78rpx;
+}
+.next{
+  justify-content: flex-end;
+  margin:20rpx 0;
+  padding:0 44rpx;
+  
+}
+.next view{
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden; 
+line-height: 36rpx;
+}
+.next image{
+	width: 18rpx;
+	height: 20rpx;
+  margin-left: 10rpx;
+}
+.next image.pre{
+  margin-left:0;
+  margin-right: 10rpx;
+  transform:rotate(180deg)
+}
+.poetrySwiper{
+	width: 100%;
+	height: calc(100% - 78rpx);
+  box-sizing: border-box;
+}
+.poetrySwiper swiper-item{
+  overflow-y: scroll;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+}
+.collectBox{
+	height: 100%;
+	padding-top: 40rpx;
+	box-sizing: border-box;
+  overflow-y: scroll;
+  padding-bottom: 10rpx;
+}

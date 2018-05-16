@@ -1,0 +1,107 @@
+/* component/pkFailModal/pkFailModal.wxss */
+@import '/app.wxss';
+.pkFailModal{
+   position: fixed; 
+  width: 600rpx;
+  height: 560rpx;
+  background: #fff;
+  left: 50%;
+  margin-left: -300rpx;
+  top: 60%;
+  margin-top: -280rpx ;
+  border-radius: 30rpx;
+  justify-content: space-between;
+  padding-bottom: 40rpx;
+  box-sizing: border-box ;
+  transition: all .5s ease-in;
+}
+
+.pkFailModal .victory_img{
+  width: 708rpx;
+   margin-left: -54rpx; 
+  margin-top: -140rpx
+}
+
+.pkFailModal .writing_img{
+  width: 240rpx;
+   margin: 0 auto; 
+  margin-top: -34rpx 
+}
+.level{
+  width: 280rpx;
+  margin: 0 auto;
+     margin-top: -70rpx 
+}
+.level_txt{
+  font-size: 28rpx;
+  color: #333;
+  text-align: center
+}
+.levelName{
+  color: #de6449
+}
+.grade {
+  width: 100%;
+  padding: 20rpx 0 ;
+  padding-top: 40rpx; 
+  box-sizing: border-box;
+  color: #333
+}
+.grade view{
+  font-size: 32rpx;
+}
+
+.grade .victoryPk{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grade .victoryPk view{
+  font-size: 60rpx;
+  color: #333;
+  padding: 15rpx 15rpx;
+  border: 2px solid #fbc033;
+  border-radius: 15rpx;
+  margin-left: 15rpx
+
+  /* font-weight: bold */
+}
+
+
+.bottom{
+  position: absolute;
+  bottom: 40rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 86rpx;
+  line-height: 86rpx;
+
+}
+
+.againPk{
+    background: linear-gradient(to right,#fe8264,#de6649 );
+  color: #ffffff;
+width: 100%;
+height: 100%;
+text-align: center;
+  border-radius: 50px;
+  overflow: hidden
+}
+
+
+.score view.item{
+	width: 45px;
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+	overflow: hidden;
+  font-size: 60rpx;
+  color: #333;
+  border: 2px solid #fbc033;
+  border-radius: 15rpx;
+  margin-left: 15rpx
+}
+.score view{
+	font-size: 60rpx;
+}

@@ -1,0 +1,127 @@
+/* pages/rankingList/rankingList.wxss */
+page{
+  background-color: #f5f5f5;
+  color: #333
+}
+.container{
+  padding: 0 25rpx 200rpx 25rpx;
+  box-sizing: border-box
+}
+.rankingList{
+  padding-top: 20rpx;
+}
+.rankingList_in{
+  background: #fff;
+  border-radius: 15rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  /* transform: translateX(110%); */
+
+}
+.rankingList_in:first-of-type{
+  margin-top: 0;
+}
+
+.rankingList_in .rankIndex{
+ width: 64rpx;
+ text-align: center;
+}
+.rankingList_in .crown{
+  width: 64rpx;
+  height: 59rpx
+}
+.rankingList_in .userHead{
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  border: 1px solid #e3694d
+}
+.rankingList_in .userInfo .answerIcon{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 5rpx;
+}
+.rankingList_in .userInfo{
+  width: 234rpx
+}
+.rankingList_in  .levelIcon{
+  width: 26rpx;
+  height: 30rpx;
+  margin-right: 5rpx
+}
+
+.rankingList_in  .diamonds{
+  width: 26rpx;
+  height: 24rpx;
+    margin-right: 5rpx
+}
+
+.marginClass{
+  margin-bottom:20rpx; 
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.flexR_o{
+  justify-content: flex-start;
+}
+.levelGrade{
+  /* width: 165rpx */
+}
+
+.rank_num{
+  width: 100%;
+  height: 175rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, .8);
+  border-bottom: 1px solid #eee ;
+  padding: 20rpx 44rpx;
+  box-sizing: border-box;
+  box-shadow: 0 -1rpx   4rpx  #f1e1dd;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column
+}
+
+.rank_num .num_color{
+  color: #f98061;
+  font-weight: bold
+}
+
+.rank_num .rank_btn{
+  width: 100%;
+  height: 84rpx;
+  text-align: center;
+  line-height: 84rpx;
+  background: #f98061;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0 5rpx 5rpx #fccbbf;
+  position: relative;
+}
+
+.rank_num .rank_btn:active{
+    box-shadow: none;
+}
+.zuan-txt{
+  color: #5e95ed;
+  word-break:keep-all;  
+}
+.level-txt{
+  color: #fbc035
+}
+
+  button{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+}

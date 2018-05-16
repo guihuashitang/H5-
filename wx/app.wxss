@@ -1,0 +1,187 @@
+/**app.wxss**/
+/**loading**/
+page{
+	box-sizing:border-box;
+  height:100%;
+}
+.wrap{
+	height:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%;
+}
+view{
+	font-size:28rpx;
+	color:#333;
+}
+.flexR{
+	display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+.flexR_n{
+	display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
+}
+.flexC{
+	display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+image{
+	display:block;
+}
+/*背景色*/
+.mainBg{
+  background-color:#dd6449;/*主色*/
+  color: #fff;
+}
+.bg1{
+	background:#fdefec;/*浅色1*/
+	color: #fff;
+}
+.bg2{
+	background:#ffd4cf;/*浅色2*/
+	color: #fff;
+}
+.grayBg{
+	background-color:#eee;
+  	color: #fff;
+}
+/*边框*/
+.mainBorder{
+	border:1px solid #dd6449;
+}
+.borderBottomE{
+	border-bottom:1px solid #eee;
+}
+/*颜色*/
+.mainColor{
+	color:#dd6449;
+}
+.colorF{
+	color:#fff;
+}
+.color3{
+	color: #333;
+}
+.color6{
+	color: #666;
+}
+.color9{
+	color: #999;
+}
+/*字体*/
+.font10{
+	font-size: 20rpx;
+	line-height: 1.5em;
+}
+.font11{
+	font-size: 22rpx;
+}
+.font12{
+	font-size: 24rpx;
+	line-height: 1.5em;
+}
+.font13{
+	font-size: 26rpx;
+	line-height: 1.5em;
+}
+.font14{
+	font-size: 28rpx;
+	line-height: 1.5em;
+}
+.font15{
+	font-size: 30rpx;
+	line-height: 1.5em;
+}
+.font16{
+	font-size: 32rpx;
+	color: #666;
+}
+.font18{
+	font-size: 36rpx;
+}
+.loadding{
+	position:absolute;
+	left:0;
+	right:0;
+	margin:0 auto;
+	bottom:8rpx;
+	font-size:28rpx;
+	color:#333;
+	text-align:center;
+}
+/*分页加载  */
+.yes {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+.load-add {
+
+  left:0;
+  bottom:-8rpx;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 80rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+.load-add view {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: #999;
+  margin-right: 10rpx;
+}
+
+@keyframes box {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.load-add view:nth-child(1) {
+  animation: box 0.5s ease 0.1s infinite alternate;
+}
+
+.load-add view:nth-child(2) {
+  animation: box 0.5s ease 0.2s infinite alternate;
+}
+
+.load-add view:nth-child(3) {
+  animation: box 0.5s ease 0.3s infinite alternate;
+}
+
+.load-add view:nth-child(4) {
+  animation: box 0.5s ease 0.5s infinite alternate;
+}
+
+.load-add view:nth-child(5) {
+  animation: box 0.5s ease 0.6s infinite alternate;
+}
+
+img_bg{
+  background-color: #fff
+}

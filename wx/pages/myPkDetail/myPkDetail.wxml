@@ -1,0 +1,48 @@
+<!--pages/myPkDetail/myPkDetail.wxml-->
+<view class='container'>
+  <view class='pkDetail'>
+    <view class="detailTop flexR">
+      <view class='detailTop_in flexR'>
+        <view class='headImg'>
+          <image src='/images/v_img.png' wx:if="{{clearing.total_score>clearing.matcher_total_score}}" class='v_img' mode='widthFix'></image>
+          <image src='{{clearing.headimgurl}}' class='head_img img_bg' ></image>
+        </view>
+        <view class='pk_txt'>
+          <text>{{clearing.total_score}}</text>
+          <text class='vs'>VS</text>
+          <text>{{clearing.matcher_total_score}}</text>
+        </view>
+        <view class='headImg'>
+          <image src='/images/v_img.png' class='v_img'  wx:if="{{clearing.total_score<clearing.matcher_total_score}}"  mode='widthFix'></image>
+          <image src='{{clearing.matcher_headimgurl}}' class='head_img img_bg'></image>
+        </view>
+      </view>
+    </view>
+    <view class='pkDetail_in'>
+      <scroll-view class='scroll-details' scroll-y>
+        <view class='pkGrade'>
+          <view class='pkGrade_in' wx:for="{{clearing_list}}">
+            <view class='pk_subject flexR'>
+              <block wx:for="{{item.question_content}}">
+                <text wx:if="{{item!='*'}}">{{item}}</text>
+                <view wx:else class="null"></view>
+              </block>
+            </view>
+            <view class='isRight flexR'>
+              <image class='right' src="{{item.is_right==1?'/images/right_img.png':'/images/wrong_img.png'}}" mode='widthFix'></image>
+              <image class='wrong' src="{{item.matcher_is_right==1?'/images/right_img.png':'/images/wrong_img.png'}}" mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='bot_btn flexR'>
+    <view class='againPk flexR' bindtap="again" hover-class="hoverActive">再来一局</view>
+    <view class='shareFriend flexR' hover-class="hoverActive">炫耀一下
+      <button open-type="share"></button>
+    </view>
+  </view>
+</view>
+<!--页面加载  -->
+ <loading hidden="{{pageLoad}}">数据加载中...</loading>

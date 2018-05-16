@@ -1,0 +1,29 @@
+<!--pages/poetryList.wxml-->
+<view class="wrap">	
+	<scroll-view class="poetryList" scroll-y="true" lower-threshold="200" bindscrolltolower="toPageEnd">
+		<view class="color6 font14 topTitle flexR">
+			<view class="icon mainBg"></view>
+			<view class="detail color1">{{grade}}诗词 共<text class="mainColor">{{totalCount}}</text>首</view>
+		</view>
+		<view class="poetryItem flexR borderBottomE" hover-class="action" wx:for="{{poetryList}}" bindtap="toDetail" data-index="{{index}}" style='transform: translateX({{translateX}}%);  transition: all .5s ease-in {{index*0.1}}s'>
+			<view class="info ">
+				<view class="flexR poetry_title">
+					<view class="font15 color3">《{{item.poetry_title}}》</view>
+					<view class="color9 font12">[{{item.dynasty}}]{{item.poet_name}}</view>
+				</view>
+				<view class="color6 font13 poetry_content">{{item.poetry_bref}}</view>
+			</view>
+			<view class="nextPage">
+				<image mode="widthFix" src="/images/nextPage.png"></image>
+			</view>
+		</view>			
+	</scroll-view>
+	<view class="flexR bottomStart">
+		<view class="error" bindtap="toErrorBook"  hover-class="action">
+			<image src="/images/errorBook.png"></image>
+			<view class="font14 color6">错题集</view>
+		</view>
+		<view class="start colorF" bindtap="toQuestion" hover-class="action">开始练习</view>
+	</view>
+	<pay wx:if="{{showPay}}" bindpaySuccess="toPaySuccess" bindpayFail="toPayFail" bindcancle="hidePay" book_price="{{payInfo.sale_price}}" book_id="{{book_id}}"></pay>
+</view>

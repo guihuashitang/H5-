@@ -1,0 +1,10 @@
+<!--component/search/search.wxml-->
+<view class="search bg1 flexR">
+	<view class="icon flexR">
+		<image src="/images/search.png"></image>
+	</view>
+	<input class="color9" bindblur="toSearch" type="text" value="{{value}}" placeholder="按照作者/诗词/内容搜索" placeholder-class="color9 font12"/>
+	<view class="icon2 flexR" bindtap="clearIpt" data-id="clearIpt">
+		<image src="/images/closePay.png"></image>
+	</view>
+</view>

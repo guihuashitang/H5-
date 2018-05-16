@@ -1,0 +1,81 @@
+<!--pages/pk/pk.wxml-->
+<view class='container'>
+  <view class='top'>
+    <stripe></stripe>
+    <stripe></stripe>
+  </view>
+  <view class='lower' catchtap='toPK' data-index='1' hover-class="hoverActive">
+    <view class='lower-left'>
+      <view class='pk-item'></view>
+      <image class='field-txt' src='/images/yello-txt.png' mode='widthFix'></image>
+      <view class='grade'>Lower grade field</view>
+    </view>
+    <image class='yellow-bg' src='/images/yellow-bg.png' mode='widthFix'></image>
+    <view class='begin'>
+      <view class='begin-in color-y flexR'>
+        开始PK>
+      </view>
+    </view>
+  </view>
+  <view class='top'>
+    <stripe high='60'></stripe>
+    <stripe high='60'></stripe>
+  </view>
+  <view class='lower' catchtap='toPK' data-index='2' hover-class="hoverActive">
+    <view class='lower-left'>
+      <view class='pk-item bg-g'></view>
+      <image class='field-txt' src='/images/green-txt.png' mode='widthFix'></image>
+      <view class='grade'>Lower grade field</view>
+    </view>
+    <image class='yellow-bg' src='/images/green-bg.png' mode='widthFix'></image>
+    <view class='begin'>
+      <view class='begin-in color-g flexR'>
+        开始PK>
+      </view>
+    </view>
+  </view>
+  <view class='top'>
+    <stripe high='60'></stripe>
+    <stripe high='60'></stripe>
+  </view>
+  <view class='lower' catchtap='toPK' data-index='3' hover-class="hoverActive">
+    <view class='lower-left'>
+      <view class='pk-item bg-r'></view>
+      <image class='field-txt' src='/images/red-txt.png' mode='widthFix'></image>
+      <view class='grade'>Lower grade field</view>
+    </view>
+    <image class='yellow-bg' src='/images/red-bg.png' mode='widthFix'></image>
+    <view class='begin'>
+      <view class='begin-in color-r  flexR'>
+        开始PK>
+      </view>
+    </view>
+  </view>
+  <view class='top'>
+    <stripe high='48'></stripe>
+    <stripe high='48'></stripe>
+  </view>
+  <view class='rule'>
+      <view class='rule-title'>积分规则说明</view>
+      <view class='rule-content'>
+      	<view class="list">
+    			<view class="leftIcon"></view>
+    			<view class="explainText">
+    				每次PK获胜奖励500学分，失败扣除300学分。
+    			</view>
+    		</view>
+    		<view class="list">
+    			<view class="leftIcon"></view>
+    			<view class="explainText">
+    				根据学分数量奖励对应等级勋章，集齐勋章可以获得神秘奖励。
+    			</view>
+    		</view>
+    		<view class="list">
+    			<view class="leftIcon"></view>
+    			<view class="explainText">
+    				诗词对答解释权由<text class='company'>武汉理工数字传播工程有限公司</text>所有。
+    			</view>
+    		</view>
+      </view>
+    </view>
+</view>

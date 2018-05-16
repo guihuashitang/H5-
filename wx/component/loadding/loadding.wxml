@@ -1,0 +1,9 @@
+<!--component/loadding/loadding.wxml-->
+<view class="mask flexR" wx:if="{{showSetLike}}">
+	<view class="modalBox flexC">
+		<image class="headimg" mode="widthFix" src="/images/load2.png"></image>	
+		
+		<view class="content">正在加载数据</view>
+	</view>	
+</view>
+

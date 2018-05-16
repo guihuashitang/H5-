@@ -1,0 +1,46 @@
+<!--pages/myPk/myPk.wxml-->
+<view class='container' wx:if="{{pkInfo.length!==0}}">
+  <view wx:for="{{pkInfo}}" class="gradeItem">
+    <view class="title flexR" wx:if="{{item.create_time!=pkInfo[index-1].create_time}}">
+      <view class="icon mainBg"></view>
+      <view class="detail color1">{{item.create_time}}</view>
+    </view>
+    <view class="books">
+      <view class="book" bindtap="toPkDetail" data-id="{{item.question_guid}}">
+        <view class="bookItem flexR borderBottomE" hover-class="hoverActive">
+          <view class="bookPic">
+            <image mode="widthFix" src="{{item.total_score>item.matcher_total_score?'/images/win_img.png':'/images/Defeat_img.png'}}"></image>
+          </view>
+          <view class="flexC bookDetail">
+            <view class="detailTop flexR">
+              <image src='{{item.headimgurl}}' class='head_img'></image>
+              <view class='pk_txt'>
+                <text>{{item.total_score}}</text>
+                <text class='vs'>VS</text>
+                <text>{{item.matcher_total_score}}</text>
+              </view>
+              <image src='{{item.matcher_headimgurl}}' class='head_img'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{isLoading}}">
+    <view class='yes' wx:if="{{pageMore}}">加载完成</view>
+    <view class='load-add' wx:if="{{pageLoading}}">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+  </view>
+</view>
+
+<view class='no_pk flexC' wx:if="{{pkInfo.length==0}}">
+  <image class='no_pk_img' src='/images/no_pk.png' mode="widthFix"></image>
+  <view class='no_pk_txt'>您当前还没有pk记录哦</view>
+</view>
+<!--页面加载  -->
+<loading hidden="{{pageLoad}}">数据加载中...</loading>

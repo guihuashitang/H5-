@@ -1,0 +1,43 @@
+<!--pages/myCollection/myCollection.wxml-->
+<view class="wrap">
+  <block wx:if="{{totalCount>0}}">
+    <scroll-view class="poetryList-view" scroll-y="true" lower-threshold="200" bindscrolltolower="toPageEnd">
+      <view class="poetryList" wx:for="{{poetryList}}">
+        <view class="font14 topTitle flexR" wx:if="{{item.create_time!=poetryList[index-1].create_time}}">
+          <view class="icon mainBg"></view>
+          <view class="detail color6">{{item.create_time}}</view>
+        </view>
+        <view class="poetryItem flexR borderBottomE" bindtap="toDetail" data-index="{{index}}">
+          <view class="info ">
+            <view class="flexR poetry_title">
+              <view class="font15 color3">《{{item.poetry_title}}》</view>
+              <view class="color9 font12">[{{item.dynasty}}]{{item.poet_name}}</view>
+            </view>
+            <view class="color6 font13 poetry_content">{{item.poetry_bref}}</view>
+          </view>
+          <view class="nextPage">
+            <image mode="widthFix" src="/images/nextPage.png"></image>
+          </view>
+        </view>
+
+      </view>
+      <view wx:if="{{isLoading}}">
+        <view class='yes' wx:if="{{pageMore}}">加载完成</view>
+        <view class='load-add' wx:if="{{pageLoading}}">
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+          <view></view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </block>
+  <block wx:else>
+    <view class="noErrorBg flexC">
+      <image src="/images/noErrorBg.png"></image>
+      <text>您当前还没有搜藏记录哦~</text>
+    </view>
+  </block>
+</view>

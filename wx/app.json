@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/poetryList/poetryList",
+    "pages/rankingList/rankingList",
+    "pages/my/my",
+    "pages/pk/pk",
+    "pages/question/question",
+    "pages/poetryDetail/poetryDetail",
+    "pages/pkAnswer/pkAnswer",
+    "pages/errorBook/errorBook",
+    "pages/errorQuestion/errorQuestion",
+    "pages/myBuy/myBuy",
+    "pages/myCollection/myCollection",
+    "pages/myPk/myPk",
+    "pages/myPkDetail/myPkDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "诗词对答",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#999",
+    "selectedColor": "#dd6449",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/indexIcon.png",
+        "selectedIconPath": "/images/indexActiveIcon.png"
+      },
+      {
+        "pagePath": "pages/pk/pk",
+        "text": "PK赛",
+        "iconPath": "/images/pkIcon.png",
+        "selectedIconPath": "/images/pkActiveIcon.png"
+      },
+      {
+        "pagePath": "pages/rankingList/rankingList",
+        "text": "排行榜",
+        "iconPath": "/images/rankIcon.png",
+        "selectedIconPath": "/images/rankActiveIcon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/myIcon.png",
+        "selectedIconPath": "/images/myActiveIcon.png"
+      }
+    ]
+  }
+}

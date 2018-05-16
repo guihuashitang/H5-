@@ -1,0 +1,18 @@
+<!--component/showModal/showModal.wxml-->
+<view class="mask flexR" wx:if="{{showSetLike}}">
+	<view class="modalBox flexC">
+		<view class="delete" bindtap="close">
+			<image class="deleteIcon" src="/images/Menu-close.png" mode="widthFix"></image>
+		</view>
+		<view class="detail flexC">
+			<image class="headimg" mode="widthFix" src="{{userInfo.headimg}}"></image>
+			<view class="nickname">{{userInfo.nickname}}</view>
+			<view class="content">为我点赞,解锁课程吧</view>
+			<view bindtap="sure" class="btn" hover-class="action">
+				<image class="liked" mode="widthFix" src="/images/liked2.png"></image>			
+			</view>
+		</view>
+		
+		
+	</view>	
+</view>

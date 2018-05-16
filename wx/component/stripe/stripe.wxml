@@ -1,0 +1,9 @@
+<!--component/stripe/stripe.wxml-->
+<view class='item flexC' style='height: {{high}}rpx'>
+  <view class='stripe' >
+    <view class='stripe-in' ></view>
+  </view>
+  <view class='circle'>
+    <view class='circle-in'></view>
+  </view>
+</view>

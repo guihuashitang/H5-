@@ -1,0 +1,13 @@
+<!--component/record.wxml-->
+<view wx:if="{{recordStaus==-1||recordStaus==0}}" class="record mainBg" bindtouchstart="recordStart" bindtouchend="send">
+	<view class="circle circle1 mainBg"></view>
+	<view class="circle {{recordStaus==0?'circle2':''}}"></view>
+	<view class="circle {{recordStaus==0?'circle3':''}}"></view>
+	<view class="textTip">长按录音</view>
+	<image class="image" mode="widthFix" src="/images/record.png"></image>
+</view>
+<view wx:elif="{{recordStaus==1}}" class="record upData loaddingBg" bindtouchstart="recordStart" bindtouchend="send">
+	<image class="image" mode="widthFix" src="/images/loadding.png"></image>
+	<!--<view class="textTip">正在上传</view>-->
+</view>
+<showModal wx:if="{{showModal}}"  btnInfo="{{btnInfo}}"></showModal>

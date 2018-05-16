@@ -1,0 +1,45 @@
+<!--pages/myBuy/myBuy.wxml-->
+<view class='container' wx:if="{{bookInfo.length!==0}}">
+  <view wx:for="{{bookInfo}}" class="gradeItem">
+    <view class="title flexR" wx:if="{{item.createtime!=bookInfo[index-1].createtime}}">
+      <view class="icon mainBg"></view>
+      <view class="detail color1">{{item.createtime}}</view>
+    </view>
+    <view class="books">
+      <block>
+        <view class="book" bindtap="toSearchPaper" hover-class="hoverActive" data-bookid='{{item.book_id}}' data-grade='{{item.book_grade}}'>
+          <view class="bookItem flexR borderBottomE">
+            <view class="bookPic">
+              <image mode="widthFix" src="{{item.book_pic}}"></image>
+              <!-- <view class="payed flexR" >
+                <image src="/images/payIcon.png"></image>
+              </view> -->
+            </view>
+            <view class="flexC bookDetail">
+              <view class="detailTop">
+                <view class="color3 bookName">{{item.book_name}}</view>
+                <view class="color9 font12">来源：{{item.book_publish}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- <view>
+    <view class='yes' wx:if="{{pageMore}}">加载完成</view>
+    <view class='load-add' wx:if="{{pageLoading}}">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+  </view> -->
+</view>
+<view class='no_buy flexC' wx:if="{{bookInfo.length==0}}">
+  <image class='no_buy_img' src='/images/no_buy.png' mode="widthFix"></image>
+  <view class='no_buy_txt'>您当前还没有购买记录哦~</view>
+</view>
+<!--页面加载  -->
+<loading hidden="{{pageLoad}}">数据加载中...</loading>

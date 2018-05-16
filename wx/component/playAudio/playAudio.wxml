@@ -1,0 +1,5 @@
+<!--component/playAudio/playAudio.wxml-->
+<!--有问题暂不使用-->
+<view bindtap="onTap" data-type="{{readType}}">
+  <slot></slot>
+</view>

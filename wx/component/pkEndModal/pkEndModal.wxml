@@ -1,0 +1,57 @@
+<!--component/pkEndModal/pkEndModal.wxml-->
+<view class='pkEndModal ' style='  transform: translateY({{transY}}rpx)'  wx:if="{{showModal}}">
+  <image class='victory_img' src='/images/victory_img.png' mode='widthFix'></image>
+  <view wx:if="{{!isYes}}">
+    <image class='writing_img' src='/images/writing_img.png' mode='widthFix'></image>
+    <view class='grade flexR'>
+      <view>学分：</view>
+            <view class="score flexR">
+      	<view class="item">+</view>
+      	<view class="item">
+      		<view class="bai" animation="{{animationData}}" style="transform:translate(0,0);">
+      			 <view class="count">0</view> 
+      			<view wx:for="{{9}}" wx:key="{{index}}">{{index+1}}</view>
+      			 <view class="count">0</view> 
+      		</view>
+      	</view>
+      	<view class="item">
+      		<view class="shi" animation="{{animationData2}}" style="transform:translate(0,0);">
+      			<view class="count">0</view>
+      			<view wx:for="{{9}}" wx:key="{{index}}">{{index+1}}</view>
+      			<view class="count">0</view>
+      		</view>
+      	</view>
+      	<view class="item">
+      		<view class="ge" animation="{{animationData3}}" style="transform:translate(0,0);">
+      			<view class="count">0</view>
+      			<view wx:for="{{9}}" wx:key="{{index}}">{{index+1}}</view>
+      			<view class="count">0</view>
+      		</view>
+      	</view>
+      </view>
+      <!-- <view class='victoryPk flexR'>
+        <view class='flexR' wx:for="{{victoryPk}}">{{item}}</view>
+      </view> -->
+    </view>
+  </view>
+  <view class='isLevel flexC' wx:if="{{isYes}}">
+    <image class='level' src='{{bg_img[indexImg].hatImg}}' mode='widthFix'></image>
+    <view class='level_txt'>
+      <view>恭喜你！</view>
+      <view>获得 ”
+        <text class='levelName'>{{bg_img[indexImg].levelName}}</text>“称号</view>
+    </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='btn flexR'>
+      <view class='againPk flexR' bindtap="again">再来一局</view>
+      <view class='shareFriend flexR'>炫耀一下
+        <button open-type="share"></button>
+      </view>
+    </view>
+    <view class='share-txt'>分享到微信群，奖励200学分</view>
+
+  </view>
+</view>
+

@@ -1,0 +1,46 @@
+<!--pages/rankingList/rankingList.wxml-->
+<view class='container'>
+  <view class='rankingList'>
+    <view class='rankingList_in flexR_n' wx:for="{{rankList}}" style='transform: translateX({{translateX}}%);  transition: all .5s ease-in {{index*.1}}s'>
+      <block wx:if="{{index==0}}">
+        <image class='crown' src='../../images/crownOne.png' mode='widthFix'></image>
+      </block>
+      <block wx:elif="{{index==1}}">
+        <image class='crown' src='../../images/crownTwo.png' mode='widthFix'></image>
+      </block>
+      <block wx:elif="{{index==2}}">
+        <image class='crown' src='../../images/crownThree.png' mode='widthFix'></image>
+      </block>
+      <block wx:else>
+        <view class='rankIndex'>{{index+1}}</view>
+      </block>
+      <image class='userHead img_bg' src='{{item.headimgurl}}' mode='widthFix'></image>
+      <view class='userInfo'>
+        <view class='marginClass'>{{item.nickname}}</view>
+        <view class='flexR flexR_o'>
+          <image class='answerIcon' src='../../images/pencil_img.png' mode='widthFix'></image>
+          <view class='zuan-txt'>已答对{{item.right_count==null?'0':item.right_count}}道题</view>
+        </view>
+      </view>
+      <view class='levelGrade'>
+        <view class='flexR marginClass  flexR_o'>
+          <image class='levelIcon' src='../../images/levelIcon.png' mode='widthFix'></image>
+          <view class='level-txt'>{{item.rank_name}}</view>
+        </view>
+        <view class='flexR flexR_o'>
+          <image class='diamonds' src='../../images/answerIcon.png' mode='widthFix'></image>
+          <view class='zuan-txt'>{{item.rank_score}}学分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='rank_num'>
+    <view>您当前排名
+      <text class='num_color'>NO.{{ranking}}</text> 名</view>
+    <view class='rank_btn'>邀请好友，比拼智商
+     <button open-type="share"></button>
+    </view>
+  </view>
+</view>
+<!--页面加载  -->
+ <loading hidden="{{pageLoad}}">数据加载中...</loading>

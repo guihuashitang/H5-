@@ -1,0 +1,128 @@
+/* component/poetryDetail/poetryDetail.wxss */
+@import '/app.wxss';
+.poetry{
+	position: relative;
+	margin: 45rpx 44rpx 20rpx;
+	background: #fff;
+	box-shadow: 0px 2px 6px 0px rgba(180, 180, 180, 0.29);
+	border-radius: 10rpx;
+}
+.playAudio{
+	position: absolute;
+	left: 40rpx;
+	top: -40rpx;
+	
+}
+.playAudio image{
+	width: 106rpx;
+	height: 106rpx;
+}
+.share,.collection{
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 80rpx;
+  height: 80rpx;
+}
+.collection{
+	position: absolute;
+	right: 110rpx;
+	top: -40rpx;
+}
+.share{
+	position: absolute;
+	right:0;
+	top: -40rpx;
+}
+.share image,.collection image{
+	width: 44rpx;
+	height: 44rpx;
+}
+.shareBtn{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	z-index:11;
+	opacity: 0;
+}
+.playAudio {
+  width: 106rpx;
+  height: 106rpx;
+}
+.poetryBox{
+  text-align: center;
+  padding: 30rpx 100rpx;
+  min-height: 496rpx;
+  box-sizing: border-box;
+}
+.poetryBox .title{
+  font-weight: bold;
+  color: #000;
+  lien-height:34rpx;
+
+}
+.poetryBox .author{
+  text-align: right;
+  line-height: 40rpx;
+  margin-bottom: 10rpx;
+
+}
+.sentence{
+	margin-bottom: 6rpx;
+}
+.sentence:nth-last-of-type(1){
+  margin-bottom: 0;
+}
+.poetryBox .word{
+  width: 78rpx;
+  text-align: center;
+}
+.poetryBox .word view:first-of-type{
+  /* min-height: 30rpx; */
+}
+.info{
+	margin: 0 44rpx;
+  min-height: 532rpx;
+	background: #fff;
+	box-shadow: 0px 2px 6px 0px rgba(180, 180, 180, 0.29);
+	border-radius: 10rpx;
+  justify-content: flex-start;
+
+}
+
+.info .tap{
+  background-color: rgba(222, 100, 73,0.051);
+  width: 100%;
+  height: 70rpx;
+
+}
+.info .tap view{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.info .tap view.active{
+  background: #fff;
+  color: #de6449;
+}
+.info .tap view.active:nth-of-type(1){
+  border-top-left-radius: 10rpx;
+}
+.info .tap view.active:nth-last-of-type(1){
+  border-top-right-radius: 10rpx;
+}
+.info .content{
+  width: 100%;
+  padding: 30rpx 60rpx;
+  flex-grow: 1;
+  /* overflow-y: scroll; */
+  box-sizing: border-box;
+}
+.info .content .explain{
+  margin-bottom: 20rpx;
+}
+.info .content .explain:nth-last-of-type(1){
+  margin-bottom: 0;
+}

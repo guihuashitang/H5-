@@ -1,0 +1,12 @@
+{
+    "navigationBarBackgroundColor": "#ea7d68",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "诗词对答",
+    "usingComponents":{
+	    "showModal":"/component/showModal/showModal",
+	    "playAudio":"/component/playAudio/playAudio",
+	    "rightCount":"/component/rightCount/rightCount"
+    }
+}

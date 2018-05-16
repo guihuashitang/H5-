@@ -1,0 +1,8 @@
+<!--component/rightCount/rightCount.wxml-->
+<view class="mask">
+  <image class="rightTip" src="/images/rightTip.png"></image>
+  <view class="textTip flexC">
+    <view class="count">{{count}}</view>
+    <view class="text">连对</view>
+  </view>
+</view>

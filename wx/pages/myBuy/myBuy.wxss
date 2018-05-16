@@ -1,0 +1,120 @@
+/* pages/myBuy/myBuy.wxss */
+page{
+  background-color: #f5f5f5
+}
+.gradeItem{
+	/* padding-top: 20rpx; */
+}
+.gradeItem:nth-last-of-type(1){
+  padding-bottom:10rpx;
+}
+.gradeItem .title{
+	line-height: 1.5em;
+	justify-content: flex-start;
+	align-items:stretch;
+	padding: 0 44rpx;
+  padding-top:  20rpx 
+}
+.gradeItem .title .detail{
+	margin-left:10rpx;
+}
+.gradeItem .title .icon{
+	width:12rpx;
+	border-radius:6rpx;	
+  margin: 4rpx 0;
+}
+
+.gradeItem .books{
+  box-shadow: 0px 2px 6px 0px rgba(180, 180, 180, 0.29);
+  border-radius: 10rpx;
+  margin:20rpx 20rpx;
+  box-sizing: border-box;
+  background: #ffffff
+}
+
+.gradeItem .book .bookItem{
+	padding: 25rpx 0;
+	margin: 0 25rpx;
+	align-items:stretch;
+
+}
+.hoverActive{
+	background: #f8f8f8;
+}
+.books view:nth-last-of-type(1) .bookItem{
+	border-bottom: none;
+}
+.gradeItem .bookPic{
+	margin-left: 20rpx;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.2);
+  position: relative;
+  width:158rpx;
+	height:210rpx;
+}
+.gradeItem .bookPic image{
+	width:158rpx;
+	height:210rpx;
+	display: block;
+}
+.payed{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 44rpx;
+  height: 44rpx;
+  background: #4e8cee;
+  border-radius: 50%;
+}
+.gradeItem .bookPic .payed image{
+  width: 25rpx;
+  height: 28rpx;
+}
+.gradeItem .book .bookDetail{
+  flex-grow: 1;
+	justify-content: space-between;
+	padding: 0 20rpx;
+  align-items:stretch;
+  position: relative;
+}
+.gradeItem .book .bookDetail .detailTop .bookName{
+  margin-bottom: 10rpx;
+}
+.gradeItem .book .bookDetail .bookUsed{
+	justify-content: flex-end;
+}
+.gradeItem .book .bookDetail .payed{
+	width: 80rpx;
+	height: 80rpx;
+	position: absolute;
+	right: -25rpx;
+	top:0;
+}
+
+.gradeItem .book .bookDetail .payed .icon{
+	position: absolute;
+	left:0;
+	top:0;	
+}
+.gradeItem .book .bookDetail .payed .text{
+	position: absolute;
+	right:0rpx;
+	top:10rpx;
+	transform: rotate(45deg);
+	color: #fff;
+}
+
+.no_buy{
+  width: 100%;
+  height: 100vh;
+
+}
+
+.no_buy .no_buy_img{
+  width: 258rpx;
+
+}
+.no_buy .no_buy_txt{
+  color: #bbbbbb;
+  font-size: 28rpx
+}

@@ -1,0 +1,29 @@
+<!--pages/errorBook/errorBook.wxml-->
+<view class="wrap">	
+	<scroll-view class="poetryList" scroll-y="true" lower-threshold="200" bindscrolltolower="toPageEnd">
+		<view class="color6 font14 topTitle flexR">
+			<view class="icon mainBg"></view>
+			<view class="detail color1">共<text class="mainColor">{{totalCount<0?0:totalCount}}</text>道错题</view>
+		</view>
+		<block wx:if="{{totalCount>0}}">
+			<view class="poetryItem flexR borderBottomE" wx:for="{{poetryList}}" hover-class="action" bindtap="toQuestion" data-id="{{item.id}}" data-last_id="{{poetryList[index+1].id}}" data-index='{{index}}' style='transform: translateX({{translateX}}%);  transition: all .5s ease-in {{index*0.1}}s'>
+				<view class="color9">{{index+1}}.</view>
+				<view class="color3 poetry_content flexR">
+					<block wx:for="{{item.question_content}}">
+		          		<text wx:if="{{item!='*'}}">{{item}}</text>
+		          		<view wx:else class="null"></view>
+		          	</block> 
+				</view>
+				<view class="mainColor again">去重做</view>
+				<image mode="widthFix" src="/images/nextArrow2.png"></image>
+			</view>	
+		</block>
+		<block wx:else>
+			<view class="noErrorBg flexC">
+				<image src="/images/noErrorBg.png"></image>
+				<text>您当前还没有错题记录哦~</text>
+			</view>
+		</block>		
+	</scroll-view>
+	<showModal wx:if="{{showModal}}" btnInfo="{{btnInfo}}"></showModal>
+</view>

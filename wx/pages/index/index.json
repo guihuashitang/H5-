@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "诗词对答",
+    "navigationBarBackgroundColor":"#ffffff",
+    "usingComponents":{
+	    "search":"/component/search/search"
+    }
+}

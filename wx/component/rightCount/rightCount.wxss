@@ -1,0 +1,55 @@
+/* component/rightCount/rightCount.wxss */
+.mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index: 99999;
+	padding-top: 160rpx;
+	box-sizing: border-box;
+	
+}
+.rightTip{
+	width: 502rpx;
+	height: 502rpx;
+	margin:0 auto;
+	
+}
+.textTip{
+	position: absolute;
+	width: 174rpx;
+	height: 174rpx;
+	top:320rpx;
+	left:50%;
+	margin-left: -87rpx;
+	text-align: center;
+}
+.textTip .count{
+	font-size: 80rpx;
+  	font-weight: bold;  	
+    text-shadow: 5rpx 2rpx 10rpx rgba(255,161,27,0.63);
+    -webkit-text-stroke: 4rpx #fff;
+    background-image: linear-gradient(to bottom right, rgba(255,223,14,1) , rgba(255,115,19,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.textTip .text{
+	font-size: 30rpx;
+	font-weight: bold;  	
+	color: #ff9833;
+	-webkit-text-stroke: 1px #fff;
+	text-shadow: 5rpx 2rpx 10rpx rgba(255,161,27,0.63);
+}
+.flexR{
+	display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+.flexC{
+	display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}

@@ -1,0 +1,142 @@
+/* pages/myPkDetail/myPkDetail.wxss */
+page{
+  background: url(http://image.chubanyun.net/images/poetry/pk_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  padding: 40rpx 23rpx;
+  box-sizing: border-box ;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column
+}
+
+.detailTop .head_img{
+  width: 118rpx;
+  height: 118rpx;
+  border-radius: 50%;
+  border: 1px solid #dd654a
+}
+.detailTop .pk_txt{
+  padding-top: 50rpx;
+  margin: 0 50rpx
+
+}
+.detailTop .pk_txt .vs{
+  margin: 0 10rpx;
+  color: #999
+}
+.detailTop{
+  position: relative;
+    height: 120rpx;
+    width: 100%;
+    justify-content: space-around
+}
+.detailTop .detailTop_in{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0
+}
+.detailTop .detailTop_in .headImg{
+  position: relative;
+}
+.detailTop .detailTop_in .headImg .v_img{
+  position: absolute;                                           
+  width: 94rpx;
+  left: 50%;
+  margin-left: -47rpx;
+  top: -20rpx
+}
+.pkDetail .pkDetail_in{
+  background: #ffffff;
+  border-radius: 15rpx;
+  margin-top: -60rpx ;
+  padding: 80rpx 20rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  height: calc(100vh - 262rpx)
+}
+
+.pkDetail .pkDetail_in .scroll-details{
+  width: 100%;
+  height: calc(100vh - 342rpx);
+  box-sizing: border-box
+}
+
+.pkDetail .pkDetail_in .scroll-details .pk_subject{
+  font-size: 28rpx;
+  text-align: center;
+
+  box-sizing: border-box
+}
+.pkDetail .pkDetail_in .scroll-details  .isRight{
+  padding: 0 120rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-top: 30rpx 
+}
+.pkDetail .pkDetail_in .scroll-details  .isRight image{
+  width: 42rpx
+}
+
+.pkDetail .pkDetail_in .scroll-details .pkGrade .pkGrade_in{
+  padding: 20rpx
+}
+.pkDetail .pkDetail_in .scroll-details .pkGrade .pkGrade_in:nth-child(odd){
+  background: #f5f5f5;
+  border-radius: 15rpx  
+}
+
+.bot_btn{
+  width: 100%;
+  justify-content: space-around
+}
+.bot_btn view{
+width: 270rpx;
+height: 82rpx;
+border-radius: 50px;
+border: 1px solid #dd6548;
+color: #dd6548;
+background: #ffffff
+}
+.bot_btn .shareFriend{
+  background: linear-gradient(to right,#fe8264,#de6649 );
+  color: #ffffff;
+  margin-left: 20rpx;
+  position: relative;
+  box-shadow: 0 5rpx 5rpx #c99e93
+}
+.againPk.hoverActive{
+  background: #f8f8f8;
+}
+.shareFriend.hoverActive{
+  background: #ff715a;
+}
+.share-txt{
+  font-size: 22rpx;
+  color: #999999;
+  text-align: center;
+  margin-top: 20rpx 
+}
+
+
+  button{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 266rpx;
+  height: 84rpx;
+  opacity: 0;
+
+}
+
+ .null{
+  border-bottom: 1px solid #fff;
+  width:40rpx;
+  height: 40rpx; 
+  box-shadow: 0 1px 0 rgba(51,51,51,0.54);
+}

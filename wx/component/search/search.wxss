@@ -1,0 +1,28 @@
+/* component/search/search.wxss */
+@import '/app.wxss'
+.search{
+  width:100%;
+  height: 70rpx; 
+  padding: 0 21rpx;
+  box-sizing: border-box;
+  border-radius:40rpx;
+  justify-content: space-between;
+}
+.search input{
+	flex-grow: 1;
+}
+.icon{
+	margin-right: 20rpx;
+}
+.icon image{
+	width: 40rpx;
+	height: 40rpx;
+}
+.icon2{
+	margin-left: 20rpx;
+}
+.icon2 image{
+	width: 30rpx;
+	height: 30rpx;
+	padding:10rpx;
+}

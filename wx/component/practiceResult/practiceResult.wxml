@@ -1,0 +1,60 @@
+<!--component/practiceResult/practiceResult.wxml-->
+<view class="result">
+	<view class="finish">
+		
+	</view>
+	<view class="info flexC">
+		<view class="user">
+			<view class="imageBox">
+				<image src="{{headimgurl}}"></image>
+			</view>
+			<text>{{nickname}}</text>
+			<view class="key flexR">
+				<view class="keyBox flexR">
+					<image src="/images/keyIcon2.png"></image>
+				</view>
+				<text>{{keyNumber}}把</text>
+			</view>
+		</view>
+		<view class="right">答对<text>{{rightCount}}</text>题</view>
+		<!--<view class="win flexR">
+			<view class="honor flexR">
+				<image src="/images/honor.png"></image>
+				<text>儒生</text>
+			</view>
+			<view class="key flexR">
+				<image src="/images/keyIcon2.png"></image>
+				<text>{{keyNumber}}把</text>
+			</view>
+		</view>-->
+		<view class="flexR btn">
+			<view class="again" bindtap="again">再来一次</view>
+			<view class="share">
+				<button open-type="share"></button>
+				分享好友
+			</view>
+		</view>
+		<view class="shareTip">分享给好友，奖励1把钥匙</view>
+	</view>
+	<view class="goPay flexR">
+		<image class="goPayBg" src="/images/goPayBg.png"></image>		
+    	<view class="explain">
+    		<view class="list">
+    			<view class="leftIcon"></view>
+    			<view class="explainText">
+    				未购买的用户可以使用钥匙完成练习，每组练习消耗1把钥匙，分享好友奖励1把钥匙;
+    			</view>
+    		</view>
+    		<view class="list">
+    			<view class="leftIcon"></view>
+    			<view class="explainText">
+    				购买<text bindtap="pay" >《{{book_name}}》</text>可无限练习
+    			</view>
+    		</view>
+    	</view>
+		<!--<view class="pay flexR" bindtap="pay">
+			<text>去购买</text>
+			<image src="/images/arrowBlue.png"></image>		
+		</view>-->
+	</view>
+</view>

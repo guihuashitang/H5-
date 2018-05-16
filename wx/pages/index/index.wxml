@@ -1,0 +1,77 @@
+
+  <view class="index">
+  	<view class="top {{showSearch?'showSearch':'hideSearch'}}">
+  		<view  class="indexSearch" >
+  			<search bindtoSearch="searchInput" bindtoClearIpt="clearIpt"></search> 		
+  		</view>  		
+      <view class="grade ">
+      	<view class="gradeBox flexR {{showAllGrade?'gradeBoxBorder':''}}" style="{{showAllGrade?'height:264rpx;transition:0.5s;':'height:68rpx;transition:0.5s;'}}">
+      		<view wx:for="{{grade}}" wx:key="{{index}}" bindtap="toSearch" data-grade="{{'grade'+index}}" data-index="{{index}}" class="gradeList mainBorder mainColor {{currentGrade==index?'mainBg colorF':''}}">{{item}}</view>
+      		<block wx:if="{{!showAllGrade}}">      			
+      			<view class="moreGrade flexR" bindtap="moreGrade">
+      				<image src="/images/moreGrade.png"></image>
+      			</view>
+      		</block>
+      		<block wx:else>
+      			<view class="hideGrade flexR" bindtap="hideGrade">
+      				<image src="/images/hideGrade.png"></image>
+      				<text class="mainColor">收起</text>
+      			</view>
+      		</block>
+      		<!--<block>
+      			<view wx:for="{{grade}}" wx:key="{{index}}" wx:if="{{index>=3}}" bindtap="toSearch" data-grade="{{'grade'+index}}" data-index="{{index}}" class="gradeList mainBorder mainColor {{currentGrade==index?'mainBg colorF':''}}">{{item=='学前'?'学前诗词':item}}</view>
+      			
+      		</block>-->
+      	</view>
+     </view>
+  	</view>
+  	<view class="depart grayBg"></view>
+	  <view class="loadingCircle flexR" wx:if="{{bookInfo.length==0}}">
+	  	<view class="loadingBox flexC">
+	  		<image src="/images/loaddingCircle.png"></image>
+	  		<view class="color9">正在加载中...</view>
+	  	</view>
+	  </view>
+  	<scroll-view class="scrollView {{showSearch?'':'addScroll'}}" scroll-y scroll-into-view="{{scrollTo}}" scroll-with-animation="true" bindscroll="scroll"> 
+  		<view id="grade0"></view> 		
+  		<view wx:for="{{grade}}" wx:key="{{index}}" wx:if="{{itemIndex>0&&bookInfo[itemIndex].length>0}}" class="gradeItem" wx:for-item="item" wx:for-index="itemIndex" id="{{'grade'+itemIndex}}">
+  			<block>
+  			<view class="title flexR">
+  				<view class="icon mainBg"></view>
+  				<view class="detail color1">{{item=='学前'?'学前诗词':item}}</view>
+  			</view>
+  			<view class="books">
+  				
+  					<block wx:for="{{bookInfo[itemIndex]}}" wx:key="{{book.id}}" wx:for-item="book">  				
+	  					<view class="book" bindtap="toSearchPaper" data-id="{{book.id}}" data-grade="{{book.book_grade}}" hover-class="hoverActive">
+		  					<view class="bookItem flexR borderBottomE">
+		  						<view class="bookPic">
+			  						<image mode="widthFix" src="{{book.book_pic}}"></image>
+			  						<view class="payed flexR" wx:if="{{book.is_pay>0}}">
+			  							<image src="/images/payIcon.png"></image>
+			  						</view>
+			  					</view>
+			  					<view class="flexC bookDetail">
+			  						<view class="detailTop">
+			  							<view class="color3 bookName">{{book.book_name}}</view>
+			  							<view class="color9 font12">来源：{{book.book_publish}}</view>
+			  						</view>
+			  						<view class="flexR bookUsed">
+			  							<!--只显示最新的4个头像-->
+			  							<view class="studyImg flexR">
+			  								<block wx:for="{{book.last_answer_users}}" wx:key="{{index}}">
+			  									<image wx:if="{{index<4}}" src="{{item.headimgurl}}"></image>
+			  								</block>
+			  								<!--<view class="color9">...</view>-->
+			  							</view>
+			  							<view class="color9 font11">{{book.study_users_count}}人正在学习</view>
+			  						</view>						
+			  					</view>
+		  					</view>
+		  				</view>	
+	  				</block>	  			
+  			</view>
+  			</block>
+  		</view>
+  	</scroll-view>
+ </view>

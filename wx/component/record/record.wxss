@@ -1,0 +1,97 @@
+/* component/record.wxss */
+
+.record{
+  padding: 30rpx;
+  border-radius: 50%;
+  position: relative;
+  z-index: 11;
+}
+.textTip{
+	position:absolute;
+	width:150rpx;
+	text-align:center;
+	left:0;
+	top:-50rpx;
+}
+.upData image.image{
+	width:50rpx;
+	heihgt:50rpx;
+	margin:15rpx;
+	animation: rotate 1.5s linear infinite;
+	-webkit-animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+		0% {
+			transform:rotate(0);
+		}
+		100% {
+			transform:rotate(360deg);
+		}
+	}
+	@-webkit-keyframes circleScale1 {
+		0% {
+			transform:rotate(0);
+		}
+		100% {
+			transform:rotate(360deg);
+		}
+	}
+.image{
+  width: 90rpx;
+  height: 90rpx;
+  position: relative;
+  z-index: 9999;
+}
+.mainBg{
+ 	background-color:#41c003;/*深绿1*/
+  color: #fff;
+}
+.loaddingBg{
+	background:#ccc;
+}
+.circle{
+	width: 100%;
+	height: 100%;
+	border-radius:50% ;
+	position: absolute;
+	left: 0;
+	top:0;
+	
+}
+.circle1{
+	z-index: 999;
+}
+.circle2{
+	background:rgba(65,192,3, 0.5) ;
+	animation: circleScale1 1s linear infinite;
+	-webkit-animation: circleScale 1s linear infinite;
+}
+.circle3{
+	background:rgba(65,192,3, 0.5) ;
+	animation: circleScale1 1s 0.5s linear infinite;
+	-webkit-animation: circleScale 1s 0.5s linear infinite;
+}
+@keyframes circleScale {
+		0% {
+			transform:scale(1);
+			background: rgba(65,192,3, 0.5);
+			opacity: 1;
+		}
+		100% {
+			transform:scale(1.8);
+			background: rgba(65,192,3, 0.5);
+			opacity: 0;
+		}
+	}
+	@-webkit-keyframes circleScale1 {
+		0% {
+			transform:scale(1);
+			background: rgba(65,192,3, 0.5);
+			opacity: 1;
+		}
+		100% {
+			transform:scale(1.8);
+			background: rgba(65,192,3, 0.5);
+			opacity: 0;
+		}
+	}

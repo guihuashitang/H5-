@@ -1,0 +1,223 @@
+.wrap2,.index{
+	height:100%;
+	background:#fff;
+	box-sizing: border-box;
+}
+.index{
+	/*overflow-y: scroll;*/
+}
+.index .top{
+	width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.index .top .indexSearch{
+  padding: 20rpx 44rpx 0;
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+.top.showSearch{
+	margin-top:0;
+}
+.top.hideSearch{
+	margin-top:-90rpx;
+}
+.index .top .grade{
+  position: relative;
+	margin-top: 20rpx;
+	height: 88rpx;
+	width: 100%;  
+}
+.index .top .gradeBox{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 68rpx;
+  padding: 0 44rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+	justify-content: flex-start;
+  background: #fff;
+  z-index: 11;
+  overflow: hidden;
+  
+}
+.gradeBoxBorder{
+	box-shadow: 0px 3px 8px 0px rgba(204, 204, 204, 0.25);
+}
+.gradeBox .moreGrade{
+  margin-bottom:20rpx;
+  justify-content: flex-end;
+  flex-grow: 1;
+  position: absolute;
+  right:36rpx;
+  top:8rpx;
+  padding: 10rpx;
+}
+.gradeBox .moreGrade image{
+	width: 37rpx;
+	height: 34rpx;
+  
+}
+.gradeBox .hideGrade{
+  margin-bottom:20rpx;
+  justify-content: flex-end;
+  flex-grow: 1;
+  position: absolute;
+  right:36rpx;
+  top:184rpx;
+  padding:10rpx;
+}
+.gradeBox .hideGrade image{
+	width: 18rpx;
+	height: 10rpx;
+  
+}
+.index .top .gradeBox .gradeList{
+	width: 180rpx;
+  height: 68rpx;
+	text-align: center;
+	line-height: 68rpx;
+	margin-bottom: 20rpx;	
+  margin-right: 20rpx;
+	border-radius: 10rpx;	
+  box-sizing: border-box;
+}
+.depart{
+  width: 100%;
+  height: 20rpx;
+}
+.scrollView{
+  /*height: calc(100% - 218rpx);*/
+  height: calc(100% - 128rpx); 
+}
+.scrollView.addScroll{
+	/*height: calc(100% - 126rpx);*/
+}
+.gradeItem{
+	padding-top: 20rpx;
+}
+.gradeItem:nth-last-of-type(1){
+  padding-bottom:10rpx;
+}
+.gradeItem .title{
+	line-height: 1.5em;
+	justify-content: flex-start;
+	align-items:stretch;
+	padding: 0 44rpx;
+}
+.gradeItem .title .detail{
+	margin-left:10rpx;
+}
+.gradeItem .title .icon{
+	width:12rpx;
+	border-radius:6rpx;	
+  margin: 4rpx 0;
+}
+
+.gradeItem .books{
+  box-shadow: 0px 2px 6px 0px rgba(180, 180, 180, 0.29);
+  border-radius: 10rpx;
+  margin:20rpx 20rpx;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.gradeItem .book .bookItem{
+	padding: 25rpx 0;
+	margin: 0 25rpx;
+	align-items:stretch;
+
+}
+.hoverActive{
+	background: #f8f8f8;
+}
+.books view:nth-last-of-type(1) .bookItem{
+	border-bottom: none;
+}
+.gradeItem .bookPic{
+	margin-left: 20rpx;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.2);
+  position: relative;
+  width:158rpx;
+	height:210rpx;
+}
+.gradeItem .bookPic image{
+	width:158rpx;
+	height:210rpx;
+	display: block;
+}
+.payed{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 44rpx;
+  height: 44rpx;
+  background: #4e8cee;
+  border-radius: 50%;
+}
+.gradeItem .bookPic .payed image{
+  width: 25rpx;
+  height: 28rpx;
+}
+.gradeItem .book .bookDetail{
+  flex-grow: 1;
+	justify-content: space-between;
+	padding: 0 20rpx;
+  align-items:stretch;
+  position: relative;
+}
+.gradeItem .book .bookDetail .detailTop .bookName{
+  margin-bottom: 10rpx;
+}
+.gradeItem .book .bookDetail .bookUsed{
+	justify-content: flex-end;
+}
+.gradeItem .book .bookDetail .payed{
+	width: 80rpx;
+	height: 80rpx;
+	position: absolute;
+	right: -25rpx;
+	top:0;
+}
+
+.gradeItem .book .bookDetail .payed .icon{
+	position: absolute;
+	left:0;
+	top:0;	
+}
+.gradeItem .book .bookDetail .payed .text{
+	position: absolute;
+	right:0rpx;
+	top:10rpx;
+	transform: rotate(45deg);
+	color: #fff;
+}
+.studyImg{
+  margin-right: 10rpx;
+}
+.studyImg image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-left: -10rpx;
+}
+
+/*加载*/
+.loadingCircle{
+	height: calc(100% - 306rpx - 4px);
+}
+.loadingCircle image{
+	width: 60rpx;
+	height: 60rpx;
+	animation:loadding 2s linear 0s infinite;
+	margin-bottom:20rpx;
+}
+@keyframes loadding
+{
+from {transform: rotate(0);}
+to {transform: rotate(360deg);}
+}

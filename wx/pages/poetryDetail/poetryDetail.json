@@ -1,0 +1,9 @@
+{
+	"navigationBarBackgroundColor": "#8cdaed",
+   "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "诗词对答",
+    "usingComponents":{
+	    "playAudio":"/component/playAudio/playAudio",
+	    "poetryDetail":"/component/poetryDetail/poetryDetail"
+    }
+}

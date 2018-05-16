@@ -1,0 +1,55 @@
+/* component/showModal/showModal.wxss */
+.mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left:0;
+	top:0;
+	background: rgba(0,0,0,0.3);
+	z-index: 99999;
+}
+.flexR{
+	display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+.modalBox{
+	border-radius: 10rpx;
+	background: #fff;
+	color:#333;
+  max-width: 70%;
+  line-height: 1.5em;
+  text-align: center;
+}
+.text{
+	padding: 60rpx 40rpx;
+ 
+}
+.btn{
+  border-top: 1px solid #ddd;
+	text-align: center;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.sure{
+	position: relative;
+}
+.sure .btnShare{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height:100%;
+	opacity: 0;
+}
+.double .sure,.double .close{
+	flex-grow: 1;
+	height: 100%;
+}
+.double view:first-child{
+	border-right: 1px solid #ccc;
+}
+.mainColor{
+	color:#41c003;/*深绿1*/
+}

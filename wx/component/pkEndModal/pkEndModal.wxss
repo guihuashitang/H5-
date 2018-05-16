@@ -1,0 +1,139 @@
+/* component/pkEndModal/pkEndModal.wxss */
+@import '/app.wxss';
+.pkEndModal{
+   position: fixed; 
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+  left: 50%;
+  margin-left: -300rpx;
+  top: 60%;
+  margin-top: -280rpx ;
+  border-radius: 30rpx;
+  justify-content: space-between;
+  padding-bottom: 40rpx;
+  box-sizing: border-box ;
+  transition: all .5s ease-in;
+  animation: aa .5s 0 ease-in
+}
+
+@keyframes aa{
+  0%{transform: translateY(-1500rpx)}
+  50%{transform: translateY(50rpx)}
+  100%{transform: translateY(0rpx)}
+}
+
+.pkEndModal .victory_img{
+  width: 708rpx;
+   margin-left: -54rpx; 
+  margin-top: -140rpx
+}
+
+.pkEndModal .writing_img{
+  width: 240rpx;
+   margin: 0 auto; 
+  margin-top: -34rpx 
+}
+
+.grade {
+  width: 100%;
+  padding: 20rpx 0 ;
+  box-sizing: border-box;
+  color: #333
+}
+.grade view{
+  font-size: 32rpx;
+}
+
+.grade .victoryPk{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grade .victoryPk view{
+  font-size: 60rpx;
+  color: #333;
+  padding: 15rpx 15rpx;
+  border: 2px solid #fbc033;
+  border-radius: 15rpx;
+  margin-left: 15rpx
+
+  /* font-weight: bold */
+}
+.btn{
+  justify-content: space-around;
+  padding: 0  20rpx
+}
+.btn view{
+width: 230rpx;
+height: 82rpx;
+border-radius: 50px;
+border: 1px solid #dd6548;
+color: #dd6548
+}
+.btn .shareFriend{
+  background: linear-gradient(to right,#fe8264,#de6649 );
+  color: #ffffff;
+  margin-left: 20rpx;
+  position: relative
+}
+.share-txt{
+  font-size: 22rpx;
+  color: #999999;
+  text-align: center;
+  margin-top: 20rpx 
+}
+.level{
+  width: 280rpx;
+  margin: 0 auto;
+     margin-top: -70rpx 
+}
+.level_txt{
+  font-size: 28rpx;
+  color: #333;
+  text-align: center
+}
+.levelName{
+  color: #de6449
+}
+.isLevel{
+  /* height: 294rpx */
+}
+
+.bottom{
+  position: absolute;
+  bottom: 40rpx;
+  width: 100%
+}
+
+  button{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+}
+
+.pkFailModal{
+  width: 100rpx;
+  height: 500rpx;
+
+}
+
+.score view.item{
+	width: 45px;
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+	overflow: hidden;
+  font-size: 60rpx;
+  color: #333;
+  border: 2px solid #fbc033;
+  border-radius: 15rpx;
+  margin-left: 15rpx
+}
+.score view{
+	font-size: 60rpx;
+}
