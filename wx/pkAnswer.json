@@ -1,8 +1,0 @@
-{
-  "navigationBarBackgroundColor": "#343553",
-  "navigationBarTextStyle": "#fff",
-  "usingComponents": {
-    "pkEndModal": "/component/pkEndModal/pkEndModal",
-    "pkFailModal": "/component/pkFailModal/pkFailModal"
-  }
-}
