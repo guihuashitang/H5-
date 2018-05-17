@@ -1,5 +1,6 @@
 
-解决本地上传远程的冲突两种方式的区别：git push -f origin master和git pull --rebase origin master
+
+解决本地上传远程的冲突两种方式的区别
 
 git push -f origin master
 or
