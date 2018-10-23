@@ -14,3 +14,5 @@ git pull --rebase origin master
 
 这是vetur中eslint的问题，在vscode菜单中，文件->首选项->设置
 找到 “vetur.validation.template”: true 将其改为false，就可关闭eslint的检查，错误消失
+
+
